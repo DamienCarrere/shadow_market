@@ -1,11 +1,9 @@
-//* #### Creation des elements home page dans le DOM ####
-export function products() {
+import { importData } from "./importData.js";
+
+export async function products(importingData = importData()) {
     const dealsForYou = document.querySelector(".dealsForYou")
 
-fetch('https://dummyjson.com/products')
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(data)
+        const data  = await importingData;
         data.products.forEach(element => {
             const productCard = document.createElement("div");
             const pictureDiv = document.createElement("div");
@@ -32,5 +30,4 @@ fetch('https://dummyjson.com/products')
                 console.log("UwU");
             })
         });
-    })
 }
