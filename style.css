@@ -13,6 +13,7 @@ body {
 
 header {
   width: 100%;
+  z-index: 9999;
 }
 
 header nav {
@@ -27,6 +28,7 @@ header nav {
   position: fixed;
   top: 0px;
   left: 0px;
+  z-index: 9999;
 }
 
 header nav input {
@@ -38,6 +40,7 @@ header nav input {
   font-size: 16px;
   transition: 0.1s;
   align-self: flex-end;
+  z-index: 9999;
 }
 
 header nav input:focus {
@@ -54,6 +57,20 @@ header nav button {
 
 main {
   margin-top: 8rem;
+}
+
+footer {
+  margin-top: 5rem;
+  width: 100%;
+  height: 5rem;
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: #f2f2f2;
 }
 
 .productsDeals {
@@ -97,11 +114,24 @@ h2 {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  z-index: 5;
+}
+
+#productButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent; /* ou une couleur si tu veux */
+  border: none;
+  cursor: pointer;
 }
 
 .pictureCard img {
   width: 90%;
   height: auto;
+  z-index: 5;
 }
 
 .dealsForYou {
@@ -111,6 +141,11 @@ h2 {
   margin: 0 3%;
   width: 100%;
   row-gap: 4rem;
+}
+
+.productsCard {
+  position: relative;
+  z-index: 5;
 }
 
 .productsCard h3 {
