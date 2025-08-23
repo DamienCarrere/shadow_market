@@ -23,7 +23,7 @@ fetch('https://dummyjson.com/products')
             productBtn.id = "productButton";
             productBtn.ariaLabel = element.title;
             productImg.src = element.thumbnail;
-            productImg.alt = element.title + element.brand;
+            productImg.alt = `${element.title} ${element.brand}`;
             productImg.loading = "lazy";
             productName.textContent = element.title;
             ProductPrice.textContent = `$${element.price}`;
