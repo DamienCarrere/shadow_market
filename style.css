@@ -123,9 +123,10 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: transparent; /* ou une couleur si tu veux */
+  background: transparent;
   border: none;
   cursor: pointer;
+  z-index: 10;
 }
 
 .pictureCard img {

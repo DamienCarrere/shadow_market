@@ -1,3 +1,4 @@
+//* #### Creation des elements home page dans le DOM ####
 export function products() {
     const dealsForYou = document.querySelector(".dealsForYou")
 
@@ -20,7 +21,10 @@ fetch('https://dummyjson.com/products')
             productCard.classList.add("productsCard")
             pictureDiv.classList.add("pictureCard")
             productBtn.id = "productButton";
+            productBtn.ariaLabel = element.title;
             productImg.src = element.thumbnail;
+            productImg.alt = element.title + element.brand;
+            productImg.loading = "lazy";
             productName.textContent = element.title;
             ProductPrice.textContent = `$${element.price}`;
 
