@@ -1,14 +1,15 @@
 :root {
 }
 
-@media screen and (width >= 1400px) {
+@media screen and (width >= 1000px) {
   main {
     max-width: 1400px;
     margin: 0 auto;
   }
 
   .dealsForYou {
-    grid-template-columns: repeat(4, 25%) !important;
+    grid-template-columns: repeat(4, 20%) !important;
+    margin: 0 3%;
   }
 }
 
@@ -162,6 +163,11 @@ h2 {
 
 .productsCard h3 {
   margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.productsCard h3:hover {
+  color: #e1b800;
+  z-index: 500;
 }
 
 .productsCard h4 {
