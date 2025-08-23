@@ -8,7 +8,7 @@
   }
 
   .dealsForYou {
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: repeat(4, 25%) !important;
   }
 }
 
