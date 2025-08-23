@@ -1,6 +1,17 @@
 :root {
 }
 
+@media screen and (width >= 1400px) {
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .dealsForYou {
+    grid-template-columns: repeat(4, 25%);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
