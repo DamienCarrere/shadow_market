@@ -65,13 +65,5 @@ footer {
   padding: 50px;
   text-align: center;
 }
-.select {
-  width: 100%;
-  padding: 12px 8px;
-  font-size: 16px;
-  border: 1px solid #000000;
-  border-radius: 6px;
-  outline: none;
-  background: white;
-}
+
 
