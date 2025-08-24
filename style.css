@@ -66,4 +66,22 @@ footer {
   text-align: center;
 }
 
+.select-design {
+  appearance: none;
+  width: 100%;
+  padding: 12px 8px;
+  font-size: 16px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  outline: none;
+}
+
+@media (width <= 1000px) {
+  main {
+    flex-direction: column;
+    padding: 0 50px;
+  }
+}
+
+
 
