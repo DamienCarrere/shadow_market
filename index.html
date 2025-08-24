@@ -1,117 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1"
+		/>
+		<title>ShadowMarket</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="./script.js" type="module" defer></script>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-  <title>ShadowMarket</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="home.js" type="module" defer></script>
-</head>
-
-<body>
-  <header>
-    <nav>
-      <div id="topsearchBar">
-        <button id="cancelBtn" style="display: none">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333">
-            <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
-          </svg>
-        </button>
-        <input type="text" placeholder="Search ShadowMarket" id="searchBar" aria-label="Search bar" />
-      </div>
-      <div id="bottomMenu">
-        <ul>
-          <li><a href="#">beauty</a></li>
-          <li><a href="#">fragrances</a></li>
-          <li><a href="#">furniture</a></li>
-          <li><a href="#">groceries</a></li>
-        </ul>
-      </div>
-      <div id="bottomBar">
-        <ul>
-          <li>
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3">
-                <path
-                  d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
-              </svg></a>
-          </li>
-          <li>
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3">
-                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-              </svg></a>
-          </li>
-          <li>
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3">
-                <path
-                  d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
-              </svg></a>
-          </li>
-          <li>
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e3e3e3">
-                <path
-                  d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z" />
-              </svg></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <h1>Apple iPhone SE 64 Go 4" Or Rose Locked</h1>
-    <span class="rating">⭐ 4.6</span>
-
-    <!-- Pas définitif, c'est juste pour l'exemple, c'était plus pour le CSS, je suis en train de me pencher sur le JS -->
-
-    <div class="product-images">
-      <img src="https://placehold.co/400" alt="iPhone SE Or Rose">
-      <div class="thumbnails">
-        <img src="https://placehold.co/400" alt="thumb1">
-        <img src="https://placehold.co/400" alt="thumb2">
-        <img src="https://placehold.co/400" alt="thumb3">
-      </div>
-    </div>
-
-    <p class="price">180 USD</p>
-    <p class="stock">En stock</p>
-    <p class="delivery">Livraison gratuite à partir du Lundi 25 août lors de votre première commande.</p>
-
-    <div class="actions">
-      <button class="btn btn-cart">Ajouter au panier</button>
-      <button class="btn btn-buy">Acheter en 1 clic</button>
-    </div>
-    <div class="description">
-      L'iPhone SE combine la puissance de la puce Apple A9 et il est compact avec un écran Retina 4 pouces. Avec ses
-      64
-      Go de stockage, sa finition élégante Or Rose et son design compact, il reste un modèle apprécié pour sa
-      praticité
-      et ses performances.
-    </div>
-
-    <div class="features">
-      <h3>Caractéristiques principales :</h3>
-      <ul>
-        <li>Écran Retina 4" - 1136 x 640 pixels</li>
-        <li>Appareil photo arrière : 12 MP avec vidéo 4K</li>
-        <li>Appareil photo avant : 1,2 MP</li>
-        <li>Processeur : Puce Apple A9, coprocesseur M9</li>
-        <li>Connectivité : 4G LTE, Wi-Fi, Bluetooth 4.2, GPS, NFC</li>
-        <li>Dimensions : 123,8 × 58,6 × 7,6 mm - Poids 113 g</li>
-      </ul>
-    </div>
-    <p>Contenu du colis :<br>
-      - iPhone SE 64 Go Or Rose (bloqué, pour pièces)<br>
-      - Accessoires non garantis (selon disponibilité)<br>
-      <br>
-      * Vendu exclusivement pour pièces détachées ou usage technique.
-    </p>
-  </main>
-</body>
-
-</html>
-<footer>
-  <p>ShadowMarket All right reserved.</p>
-</footer>
-</body>
-
+	<body>
+		<main id="main"></main>
+		<footer>
+			<p>ShadowMarket All right reserved.</p>
+		</footer>
+	</body>
 </html>
