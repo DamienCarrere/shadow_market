@@ -29,7 +29,7 @@ export async function search (importingData = importData()) {
         const results = data.products.filter(element => element.title.toLowerCase().includes(search));
         clearProducts()
         results.forEach(element => {
-            createCard(element.title, element.price, element.brand, element.thumbnail)
+            createCard(element.title, element.price, element.brand, element.thumbnail, element.id)
         });
     });
     })
@@ -62,7 +62,7 @@ export async function search (importingData = importData()) {
             titleSection.style.fontSize = ""
             clearProducts()
             data.products.forEach(element => {
-                createCard(element.title, element.price, element.brand, element.thumbnail)
+                createCard(element.title, element.price, element.brand, element.thumbnail, element.id)
             });
 }
 }
