@@ -17,7 +17,6 @@ export async function categories(importingData = importData()) {
     data.products.forEach(element => {
         if (!categories.includes(element.category)){
             categories.push(element.category);
-            console.log(categories);
         }
     });
 
@@ -28,6 +27,8 @@ export async function categories(importingData = importData()) {
         categoriesList.appendChild(list);
         list.appendChild(link);
 
+        link.href = "#";
+        link.value = element;
         link.textContent = element;
     });
     console.log(data);
