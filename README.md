@@ -8,9 +8,9 @@ Patch (0.2.2) :
 
 Patch (0.2.1) :
 
-- Adding footer nav
-- adding burger menu categories
+- Creating footer nav
+- Adding burger menu categories
 
 Patch (0.2.0) :
 
-- Adding home page
+- Creating home page
