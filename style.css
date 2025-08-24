@@ -225,7 +225,7 @@ h2 {
   z-index: 5;
 }
 
-.dealsForYou {
+.cardsSection {
   display: grid;
   grid-template-columns: 45% 45%;
   gap: 4%;

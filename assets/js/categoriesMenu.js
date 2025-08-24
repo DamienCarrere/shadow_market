@@ -1,4 +1,5 @@
 import { importData } from "./importData.js";
+import { createCard,clearProducts } from "./createCards.js";
 
 export async function categories(importingData = importData()) {
     const data = await importingData;
@@ -14,22 +15,31 @@ export async function categories(importingData = importData()) {
         }
     })
     const categories = [];
+    const titleSection = document.querySelector("#titleSectionCard")
     data.products.forEach(element => {
         if (!categories.includes(element.category)){
             categories.push(element.category);
         }
     });
-
     categories.forEach(element => {
         const list = document.createElement("li");
         const link = document.createElement("a");
-
         categoriesList.appendChild(list);
         list.appendChild(link);
 
         link.href = "#";
         link.value = element;
         link.textContent = element;
+        link.addEventListener("click", () => {
+            clearProducts()
+            burgerMenu.style.display = "none";
+            titleSection.textContent = `Categories : ${element}`;
+            const results = data.products.filter(e => e.category.includes(element));
+            results.forEach(products => {
+                createCard(products.title, products.price, products.brand, products.thumbnail,)
+            });
+        })
+
     });
     console.log(data);
 }

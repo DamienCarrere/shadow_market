@@ -1,5 +1,5 @@
 import { importData } from "./importData.js";
-import { createCard } from "./createCards.js";
+import { createCard, clearProducts} from "./createCards.js";
 
 export async function search (importingData = importData()) {
     const data = await importingData;
@@ -10,24 +10,18 @@ export async function search (importingData = importData()) {
 
 
     searchBar.addEventListener("focus", () => {
-    const forYou = document.querySelector(".dealsForYou");
-    const searchSection = document.querySelector(".searchSection");
-    console.log("I'm focusing UwU")
-    cancelBtn.style.display = "";
     parentSearchBar.classList.add("inSearch");
     searchBar.addEventListener("input", () => {
-        forYou.innerHTML = "";
         const search = searchBar.value.toLowerCase();
-        console.log(search);
         if (search !== ""){
             titleSection.textContent = `You are looking for : ${search}`;
         }else {
             titleSection.textContent = "For You";
         }
         const results = data.products.filter(element => element.title.toLowerCase().includes(search));
-        searchSection.innerHTML = "";
+        clearProducts()
         results.forEach(element => {
-            createCard(element.title, element.price, element.brand, element.thumbnail, searchSection)
+            createCard(element.title, element.price, element.brand, element.thumbnail)
         });
     });
     })

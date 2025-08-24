@@ -1,4 +1,6 @@
-export function createCard(title, price, brand, thumbnail, parent) {
+const cardsSection = document.querySelector(".cardsSection")
+
+export function createCard(title, price, brand, thumbnail) {
             const productCard = document.createElement("div");
             const pictureDiv = document.createElement("div");
             const productBtn = document.createElement("button");
@@ -6,7 +8,7 @@ export function createCard(title, price, brand, thumbnail, parent) {
             const productName = document.createElement("h3");
             const ProductPrice = document.createElement("h4");
 
-            parent.appendChild(productCard)
+            cardsSection.appendChild(productCard)
             productCard.append(pictureDiv, productBtn, productName, ProductPrice)
             pictureDiv.appendChild(productImg);
 
@@ -23,4 +25,8 @@ export function createCard(title, price, brand, thumbnail, parent) {
             productBtn.addEventListener("click", () => {
                 console.log("UwU");
             })
+}
+
+export function clearProducts() {
+    cardsSection.innerHTML = "";
 }
