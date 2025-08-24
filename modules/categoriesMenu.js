@@ -36,7 +36,7 @@ export async function categories(importingData = importData()) {
             titleSection.textContent = `Categories : ${element}`;
             const results = data.products.filter(e => e.category.includes(element));
             results.forEach(products => {
-                createCard(products.title, products.price, products.brand, products.thumbnail,)
+                createCard(products.title, products.price, products.brand, products.thumbnail, element.id)
             });
         })
 
