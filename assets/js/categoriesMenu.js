@@ -2,10 +2,33 @@ import { importData } from "./importData.js";
 
 export async function categories(importingData = importData()) {
     const data = await importingData;
+    const menuBtn = document.querySelector("#burdgerMenuBtn");
+    const burgerMenu = document.querySelector("#bottomMenu");
+    const categoriesList = document.querySelector("#categoriesList");
+
+    menuBtn.addEventListener("click", () => {
+        if (window.getComputedStyle(burgerMenu).display === "none"){
+            burgerMenu.style.display = "";
+        }else {
+            burgerMenu.style.display = "none";
+        }
+    })
+    const categories = [];
     data.products.forEach(element => {
-        console.log(element.category);
-        const categories = [];
-       
+        if (!categories.includes(element.category)){
+            categories.push(element.category);
+            console.log(categories);
+        }
+    });
+
+    categories.forEach(element => {
+        const list = document.createElement("li");
+        const link = document.createElement("a");
+
+        categoriesList.appendChild(list);
+        list.appendChild(link);
+
+        link.textContent = element;
     });
     console.log(data);
 }
