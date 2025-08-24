@@ -7,7 +7,7 @@
     margin: 0 auto;
   }
 
-  .dealsForYou {
+  .cardsSection {
     grid-template-columns: repeat(4, 20%) !important;
     margin: 0 3%;
   }
@@ -21,6 +21,7 @@
 
 body {
   background-color: #f2f2f2;
+  overflow-x: hidden;
 }
 
 header {
@@ -69,6 +70,7 @@ header nav button {
 
 main {
   margin-top: 8rem;
+  min-height: 100vw;
 }
 
 footer {
@@ -80,6 +82,7 @@ footer {
   align-items: center;
   justify-content: center;
   margin-bottom: 5rem;
+  bottom: 0;
 }
 
 footer p {
@@ -91,7 +94,27 @@ footer p {
   height: 100%;
   top: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding-left: 2rem;
+}
+
+#searchBarDiv {
+  width: 95%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#searchIcon {
+  position: absolute;
+  left: 0.8rem;
+  z-index: 9999999;
+  margin-top: 0.8rem;
+  transition: 0.1s;
+}
+
+#topsearchBar button {
+  margin-right: 0.8rem;
 }
 
 #bottomBar {
@@ -125,7 +148,7 @@ footer p {
 }
 
 #bottomBar svg {
-  height: 3.5rem;
+  height: 3rem;
   width: 3.5rem;
 }
 
@@ -135,7 +158,7 @@ footer p {
   z-index: 10;
   height: 4rem;
   width: 100%;
-  background-color: #171717;
+  background-color: #e8e8e8;
   display: flex;
   align-items: center;
 }
@@ -151,14 +174,15 @@ footer p {
 }
 
 #bottomMenu li {
-  background-color: rgb(0, 0, 0);
+  background-color: white;
+  border: solid black 1px;
   padding: 0.5rem 1.2rem;
   border-radius: 25px;
 }
 
 #bottomMenu a {
   font-size: 20px;
-  color: #f2f2f2;
+  color: black;
   padding: 2rem 0.5rem;
   text-decoration: none;
 }
@@ -226,15 +250,6 @@ h2 {
 }
 
 .cardsSection {
-  display: grid;
-  grid-template-columns: 45% 45%;
-  gap: 4%;
-  margin: 0 3%;
-  width: 100%;
-  row-gap: 4rem;
-}
-
-.searchSection {
   display: grid;
   grid-template-columns: 45% 45%;
   gap: 4%;

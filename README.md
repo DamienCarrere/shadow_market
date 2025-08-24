@@ -2,6 +2,12 @@
 
 Site de e-commerce pour évaluation
 
+Patch (0.2.4) :
+
+- Major bug fix
+- fix style.css
+- fix mobile view home page
+
 Patch (0.2.3) :
 
 - Adding categories function
