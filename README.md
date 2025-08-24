@@ -2,6 +2,11 @@
 
 Site de e-commerce pour évaluation
 
+Patch (0.2.3) :
+
+- Adding categories function
+- Bug fixe
+
 Patch (0.2.2) :
 
 - Adding search function
