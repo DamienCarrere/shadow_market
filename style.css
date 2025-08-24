@@ -232,7 +232,7 @@ h2 {
   z-index: 5;
 }
 
-#productButton {
+.productButton {
   position: absolute;
   top: 0;
   left: 0;

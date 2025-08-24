@@ -3,6 +3,11 @@
 Site de e-commerce pour évaluation
 
 
+Patch (0.2.7) :
+
+- Fix products button
+
+
 Patch (0.2.6) :
 
 - Adding search history in local storage
