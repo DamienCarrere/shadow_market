@@ -1,10 +1,8 @@
 import { makeNode } from "../utils/makeNode.js";
+import { importData } from "../utils/importData.js";
 
 export async function loadProduct(productId) {
-	const jsonFetch = await fetch(
-		`https://dummyjson.com/products/${productId}`
-	);
-	const jsonContent = await jsonFetch.json();
+	const jsonContent = await importData(productId);
 
 	const main = document.getElementById("main");
 	main.innerHTML = "";
