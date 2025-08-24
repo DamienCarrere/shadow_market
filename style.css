@@ -51,7 +51,7 @@ main {
   border-radius: 5px;
 }
 
-/* ha fókuszban van vagy nem üres */
+
 .form input:focus + label,
 .form input:not(:placeholder-shown) + label {
   top: -8px;
@@ -74,3 +74,4 @@ footer {
   outline: none;
   background: white;
 }
+
