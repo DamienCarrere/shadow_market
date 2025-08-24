@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>ShadowMarket/Checkout</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="chackout.js" type="module" defer></script>
+</head>
+
+<body>
+    <main>
+        <section class="contact-shipping">
+            <div class="contact-information">
+                <h2>Contact Information</h2>
+
+                <div class="form">
+                    <input type="email" id="email" name="email" placeholder="">
+                    <label for="email">Email / mobile number</label>
+                </div>
+            </div>
+
+            <div class="shipping-adresse form-floating">
+                <h2>Shipping Address</h2>
+                <div class="form">
+                    <input type="text" id="firstName" name="firstName" placeholder="">
+                    <label for="firstName">First Name</label>
+
+                </div>
+                <div class="form">
+                    <input type="text" id="lastName" name="lastName" placeholder="">
+                    <label for="lastName">Last Name</label>
+
+                </div>
+                <div class="form">
+                    <input type="text" id="company" name="company" placeholder="">
+                    <label for="company">Company (optional)</label>
+                </div>
+
+                <div class="form">
+                    <input type="text" id="address" name="address" placeholder="">
+                    <label for="address">Address</label>
+                </div>
+
+                <div class="form">
+                    <input type="text" id="apartment" name="apartment" placeholder="">
+                    <label for="apartment">Apartment, suite, etc.</label>
+                </div>
+
+                <div class="form">
+                    <input type="text" id="city" name="city" placeholder="">
+                    <label for="city">City</label>
+                </div>
+
+                <div class="form">
+                    <input type="text" id="country" name="country" placeholder="">
+                    <label for="country">Country</label>
+                </div>
+
+                <div class="form">
+                    <input type="text" id="postal" name="postal" placeholder="">
+                    <label for="postal">Postal Code</label>
+
+                </div>
+            </div>
+        </section>
+        <section class="shipping-payment">
+            <div class="shipping-method">
+                <h2>Shipping Method</h2>
+                <label for="shipping">Select method</label>
+                <select id="shipping" name="shipping">
+                    <option value="">Standard</option>
+                    <option value="">Point relais</option>
+                    <option value="">Éco</option>
+                </select>
+            </div>
+
+            <div class="payment-method" ">
+        <h2>Payment Method</h2>
+        <div class=" card-type">
+                <img src=" https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" width="30px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
+                    width="30px">
+            </div>
+
+            <div class=" form">
+
+                <input type="text" id="card" name="card" placeholder="">
+                <label for="card">Credit Card</label>
+            </div>
+
+            <div class="form">
+                <input type="text" id="nameOnCard" name="nameOnCard" placeholder="">
+                <label for="nameOnCard">Name on Card</label>
+            </div>
+
+            <div class="form">
+                <input type="text" id="expiration" name="expiration" placeholder="">
+                <label for="expiration">Expiration Date (MM/YY)</label>
+            </div>
+
+            <div class="form">
+                <input type="text" id="cvv" name="cvv" placeholder="">
+                <label for="cvv">Security Code</label>
+            </div>
+            </div>
+        </section>
+
+        <section class="order-summery">
+            <h2>Order Summary</h2>
+            <div class="order-summary">
+
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I agree to the General Terms and Conditions of Sale</label>
+                </div>
+                <button>Complete Purchase</button>
+            </div>
+        </section>
+    </main>
+
+
+</body>
+<footer>
+    <p>ShadowMarket All right reserved.</p>
+</footer>
+
+</html>
