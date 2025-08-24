@@ -2,6 +2,10 @@
 
 Site de e-commerce pour évaluation
 
+Patch (0.2.6) :
+
+- Adding search history in local storage
+
 Patch (0.2.5) :
 
 - Fix hierarchy

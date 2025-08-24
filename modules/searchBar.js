@@ -1,6 +1,8 @@
 import { importData } from "../utils/importData.js";
 import { createCard, clearProducts} from "../utils/createCards.js";
 
+const localHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+
 export async function search (importingData = importData()) {
     const data = await importingData;
     const parentSearchBar = document.querySelector("nav");
@@ -8,6 +10,7 @@ export async function search (importingData = importData()) {
     const cancelBtn = document.querySelector("#cancelBtn");
     const titleSection = document.querySelector("#titleSectionCard");
     const searchIcon = document.querySelector("#searchIcon");
+    const history = [];
     let search;
 
     searchBar.addEventListener("focus", () => {
@@ -37,6 +40,8 @@ export async function search (importingData = importData()) {
 
     searchBar.addEventListener("keydown", (k) => {
         if (k.key === "Enter" && searchBar.value !== ""){
+            history.push(search);
+            localStorage.setItem("searchHistory", JSON.stringify(history));
         }
         
     })
