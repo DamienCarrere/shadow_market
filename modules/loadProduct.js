@@ -4,7 +4,7 @@ import { importData } from "../utils/importData.js";
 export async function loadProduct(productId) {
 	const jsonContent = await importData(productId);
 
-	const main = document.getElementById("main");
+	const main = document.querySelector("main");
 	main.innerHTML = "";
 
 	makeNode({ type: "h1", content: jsonContent.title, parent: main });

@@ -1,3 +1,5 @@
+:root {}
+
 @media screen and (width >=1000px) {
 	main {
 		max-width: 1400px;
@@ -68,6 +70,12 @@ header nav button {
 main {
 	margin-top: 8rem;
 	min-height: 100vw;
+	max-width: 420px;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	padding: 15px;
 }
 
 footer {
@@ -281,28 +289,10 @@ h2 {
 	padding: 0.5rem 0 0.5rem 0;
 }
 
-body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	background: #f5f5f5;
-	color: #333;
-}
-
-
 h2 {
 	margin: 2rem 0 1rem 1rem;
 }
 
-main {
-	max-width: 420px;
-	margin: 20px auto;
-	background: #fff;
-	border-radius: 10px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
-	padding: 15px;
-}
 
 .rating {
 	color: #f5a623;

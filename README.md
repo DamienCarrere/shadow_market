@@ -1,42 +1,43 @@
 # shadow_market
 
 Site de e-commerce pour évaluation
+Patch (alpha-1.0) :
 
+-   merge Carla's work and Damien's work together, for ever
 
 Patch (0.2.7) :
 
-- Fix products button
-
+-   Fix products button
 
 Patch (0.2.6) :
 
-- Adding search history in local storage
+-   Adding search history in local storage
 
 Patch (0.2.5) :
 
-- Fix hierarchy
-- Bugs fix
+-   Fix hierarchy
+-   Bugs fix
 
 Patch (0.2.4) :
 
-- Major bug fix
-- fix style.css
-- fix mobile view home page
+-   Major bug fix
+-   fix style.css
+-   fix mobile view home page
 
 Patch (0.2.3) :
 
-- Adding categories function
-- Bug fix
+-   Adding categories function
+-   Bug fix
 
 Patch (0.2.2) :
 
-- Adding search function
+-   Adding search function
 
 Patch (0.2.1) :
 
-- Creating footer nav
-- Adding burger menu categories
+-   Creating footer nav
+-   Adding burger menu categories
 
 Patch (0.2.0) :
 
-- Creating home page
+-   Creating home page
