@@ -2,7 +2,6 @@ import { importData } from "../utils/importData.js";
 import { createCard, clearProducts} from "../utils/createCards.js";
 
 const localHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
-
 export async function search (importingData = importData()) {
     const data = await importingData;
     const parentSearchBar = document.querySelector("nav");
