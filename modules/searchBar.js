@@ -1,5 +1,5 @@
-import { importData } from "./importData.js";
-import { createCard, clearProducts} from "./createCards.js";
+import { importData } from "../utils/importData.js";
+import { createCard, clearProducts} from "../utils/createCards.js";
 
 export async function search (importingData = importData()) {
     const data = await importingData;

@@ -1,6 +1,6 @@
-import { products } from "./assets/js/homeProducts.js";
-import { search } from "./assets/js/searchBar.js";
-import { categories } from "./assets/js/categoriesMenu.js";
+import { products } from "./modules/homeProducts.js";
+import { search } from "./modules/searchBar.js";
+import { categories } from "./modules/categoriesMenu.js";
 
 search()
 products()

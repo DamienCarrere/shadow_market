@@ -2,6 +2,11 @@
 
 Site de e-commerce pour évaluation
 
+Patch (0.2.5) :
+
+- Fix hierarchy
+- Bugs fix
+
 Patch (0.2.4) :
 
 - Major bug fix
@@ -11,7 +16,7 @@ Patch (0.2.4) :
 Patch (0.2.3) :
 
 - Adding categories function
-- Bug fixe
+- Bug fix
 
 Patch (0.2.2) :
 

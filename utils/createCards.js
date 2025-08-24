@@ -1,6 +1,6 @@
-const cardsSection = document.querySelector(".cardsSection")
+const cardsSection = document.querySelector(".cardsSection");
 
-export function createCard(title, price, brand, thumbnail) {
+export function createCard(title, price, brand, thumbnail, id) {
             const productCard = document.createElement("div");
             const pictureDiv = document.createElement("div");
             const productBtn = document.createElement("button");
@@ -8,13 +8,14 @@ export function createCard(title, price, brand, thumbnail) {
             const productName = document.createElement("h3");
             const ProductPrice = document.createElement("h4");
 
-            cardsSection.appendChild(productCard)
-            productCard.append(pictureDiv, productBtn, productName, ProductPrice)
+            cardsSection.appendChild(productCard);
+            productCard.append(pictureDiv, productBtn, productName, ProductPrice);
             pictureDiv.appendChild(productImg);
 
-            productCard.classList.add("productsCard")
-            pictureDiv.classList.add("pictureCard")
-            productBtn.id = "productButton";
+            productCard.classList.add("productsCard");
+            pictureDiv.classList.add("pictureCard");
+            productBtn.classList.add("productButton");
+            productBtn.id = id;
             productBtn.ariaLabel = title;
             productImg.src = thumbnail;
             productImg.alt = `${title} ${brand}`;
