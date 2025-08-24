@@ -1,6 +1,18 @@
 :root {
 }
 
+@media screen and (width >= 1000px) {
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .cardsSection {
+    grid-template-columns: repeat(4, 20%) !important;
+    margin: 0 3%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +21,7 @@
 
 body {
   background-color: #f2f2f2;
+  overflow-x: hidden;
 }
 
 header {
@@ -57,20 +70,121 @@ header nav button {
 
 main {
   margin-top: 8rem;
+  min-height: 100vw;
 }
 
 footer {
-  margin-top: 5rem;
+  margin-top: 10rem;
   width: 100%;
   height: 5rem;
   background-color: #1f1f1f;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5rem;
+  bottom: 0;
 }
 
 footer p {
   color: #f2f2f2;
+}
+
+#topsearchBar {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 2rem;
+}
+
+#searchBarDiv {
+  width: 95%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#searchIcon {
+  position: absolute;
+  left: 0.8rem;
+  z-index: 9999999;
+  margin-top: 0.8rem;
+  transition: 0.1s;
+}
+
+#topsearchBar button {
+  margin-right: 0.8rem;
+}
+
+#bottomBar {
+  position: fixed;
+  bottom: 0;
+  background-color: #1f1f1f;
+  width: 100%;
+  height: 5rem;
+  z-index: 299792458;
+}
+
+#bottomBar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+#bottomBar li {
+  height: 100%;
+  width: 25%;
+}
+
+#bottomBar a {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bottomBar svg {
+  height: 3rem;
+  width: 3.5rem;
+}
+
+#bottomMenu {
+  position: fixed;
+  bottom: 5rem;
+  z-index: 10;
+  height: 4rem;
+  width: 100%;
+  background-color: #e8e8e8;
+  display: flex;
+  align-items: center;
+}
+
+#bottomMenu ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 0 1rem;
+}
+
+#bottomMenu li {
+  background-color: white;
+  border: solid black 1px;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+}
+
+#bottomMenu a {
+  font-size: 20px;
+  color: black;
+  padding: 2rem 0.5rem;
+  text-decoration: none;
 }
 
 .productsDeals {
@@ -135,7 +249,7 @@ h2 {
   z-index: 5;
 }
 
-.dealsForYou {
+.cardsSection {
   display: grid;
   grid-template-columns: 45% 45%;
   gap: 4%;
@@ -151,6 +265,11 @@ h2 {
 
 .productsCard h3 {
   margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.productsCard h3:hover {
+  color: #e1b800;
+  z-index: 500;
 }
 
 .productsCard h4 {
