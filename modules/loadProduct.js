@@ -1,6 +1,17 @@
 import { makeNode } from "../utils/makeNode.js";
 import { importData } from "../utils/importData.js";
 
+window.addEventListener("DOMContentLoaded", () => {
+	const urlParams = new URLSearchParams(window.location.search);
+	const id = urlParams.get("id");
+
+	if (id) {
+		loadProduct(id);
+	} else {
+		console.error("ID de produit non trouvé dans l'URL");
+	}
+});
+
 export async function loadProduct(productId) {
 	const jsonContent = await importData(productId);
 

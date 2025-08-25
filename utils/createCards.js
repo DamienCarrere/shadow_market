@@ -27,7 +27,7 @@ export function createCard(title, price, brand, thumbnail, id) {
 
 	productBtn.addEventListener("click", () => {
 		console.log("UwU");
-		loadProduct(id);
+		window.location.href = `desc.html?id=${id}`;
 	});
 }
 
