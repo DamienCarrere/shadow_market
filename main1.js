@@ -1,9 +1,4 @@
-const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// enregister le penier
-function saveCart() {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
 
 //
 function showCart() {
@@ -124,6 +119,7 @@ function removeFromCart(i) {
 
 //
 showCart();
+
 
 
 
