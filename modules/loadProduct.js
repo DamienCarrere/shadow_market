@@ -14,6 +14,7 @@ export async function loadProduct(productId) {
 
 	const main = document.querySelector("main");
 
+
 	makeNode({ type: "h1", content: jsonContent.title, parent: main });
 
 	// Note (grosse flemme de mettre plusieus étoiles avec les virgules)
