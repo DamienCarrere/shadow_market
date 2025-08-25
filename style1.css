@@ -7,28 +7,7 @@ h1,
 h2 {
   color: black;
 }
-#products {
-  display: flex;
-  gap: 20px;
-}
-.product {
-  background: #28551e;
-  border: 1px solid #b5b5bd;
-  padding: 15px;
-  border-radius: 10px;
-  width: 120px;
-  text-align: center;
-  box-shadow: none;
-}
-.product button {
-  margin-top: 10px;
-  padding: 5px 10px;
-  border: none;
-  background: #28a745;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
+
 #cart {
   background: #fcfcff;
   border: 1px solid #b5b5bd;
@@ -57,3 +36,4 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
 }
+
