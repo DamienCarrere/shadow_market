@@ -1,57 +1,11 @@
-const products = [
-  {
-    id: 1,
-    name: "Clavier mécanique",
-    category: "Informatique",
-    price: 59.9,
-    stock: 23,
-    rating: 4.5,
-    image: "https://placehold.co/200x200?text=Clavier",
-    description: "Clavier mécanique compact avec switchs bleus.",
-  },
-  {
-    id: 2,
-    name: "Souris sans fil",
-    category: "Informatique",
-    price: 29.9,
-    stock: 45,
-    rating: 4.3,
-    image: "https://placehold.co/200x200?text=Souris",
-    description: "Souris ergonomique sans fil avec capteur optique.",
-  },
-];
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// корзина (сохраняем в localStorage)
-// panier
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-// рисуем товары
-//articles
-const productsDiv = document.getElementById("products");
-productsDiv.innerHTML = "";
-for (let i = 0; i < products.length; i++) {
-  let p = products[i];
-  let div = document.createElement("div");
-  div.innerHTML =
-    "<img src='" +
-    p.image +
-    "' width='80'><br>" +
-    "<b>" +
-    p.name +
-    "</b><br>" +
-    "Prix: " +
-    p.price +
-    "$<br>" +
-    "Stock: " +
-    p.stock +
-    "<br>" +
-    "<button onclick='addToCart(" +
-    i +
-    ")'>Ajouter</button>";
-  productsDiv.appendChild(div);
+// enregister le penier
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// показать корзину
+//
 function showCart() {
   const container = document.getElementById("cart");
   container.innerHTML = "";
@@ -80,7 +34,7 @@ function showCart() {
       item.image +
       "' width='50'></td>" +
       "<td>" +
-      item.name +
+      item.title +
       "</td>" +
       "<td>" +
       item.price +
@@ -127,10 +81,10 @@ function addToCart(i) {
   } else {
     cart.push({
       id: product.id,
-      name: product.name,
+      name: product.title,
       price: product.price,
       stock: product.stock,
-      image: product.image,
+      image: product.thumbnail,
       quantity: 1,
     });
   }
@@ -170,4 +124,6 @@ function removeFromCart(i) {
 
 //
 showCart();
+
+
 
