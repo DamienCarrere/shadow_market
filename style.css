@@ -80,3 +80,11 @@ footer {
         padding: 0 50px;
     }
 }
+
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+    box-shadow: 0 0 5px 1px rgb(12, 172, 63);
+}

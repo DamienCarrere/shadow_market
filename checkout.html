@@ -2,129 +2,147 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="description"
+        content="Just one more step! Complete your secure and simple checkout to finalize your order. You're almost there!">
     <title>ShadowMarket/Checkout</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="chackout.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <script src="checkout.js" defer></script>
 </head>
 
 <body>
     <main>
-        <section class="contact-shipping">
-            <div class="contact-information">
-                <h2>Contact Information</h2>
+        <form action="">
+            <section class="contact-shipping">
+                <div class="contact-information">
+                    <h2>Contact Information</h2>
 
-                <div class="form">
-                    <input type="email" id="email" name="email" placeholder="">
-                    <label for="email">Email / mobile number</label>
-                </div>
-            </div>
-
-            <div class="shipping-adresse form-floating">
-                <h2>Shipping Address</h2>
-                <div class="form">
-                    <input type="text" id="firstName" name="firstName" placeholder="">
-                    <label for="firstName">First Name</label>
-
-                </div>
-                <div class="form">
-                    <input type="text" id="lastName" name="lastName" placeholder="">
-                    <label for="lastName">Last Name</label>
-
-                </div>
-                <div class="form">
-                    <input type="text" id="company" name="company" placeholder="">
-                    <label for="company">Company (optional)</label>
+                    <div class="form">
+                        <input type="email" id="email" name="email" placeholder="">
+                        <label for="email">Email / mobile number</label>
+                    </div>
                 </div>
 
-                <div class="form">
-                    <input type="text" id="address" name="address" placeholder="">
-                    <label for="address">Address</label>
+                <div class="shipping-adresse">
+                    <h2>Shipping Address</h2>
+                    <div class="form">
+                        <input type="text" id="firstName" name="firstName" placeholder="">
+                        <label for="firstName">First Name</label>
+
+                    </div>
+                    <div class="form">
+                        <input type="text" id="lastName" name="lastName" placeholder="">
+                        <label for="lastName">Last Name</label>
+
+                    </div>
+                    <div class="form">
+                        <input type="text" id="company" name="company" placeholder="">
+                        <label for="company">Company (optional)</label>
+                    </div>
+
+                    <div class="form">
+                        <input type="text" id="address" name="address" placeholder="">
+                        <label for="address">Address</label>
+                    </div>
+
+                    <div class="form">
+                        <input type="text" id="apartment" name="apartment" placeholder="">
+                        <label for="apartment">Apartment, suite, etc.</label>
+                    </div>
+
+                    <div class="form">
+                        <input type="text" id="city" name="city" placeholder="">
+                        <label for="city">City</label>
+                    </div>
+
+                    <div class="form">
+                        <input type="text" id="country" name="country" placeholder="">
+                        <label for="country">Country</label>
+                    </div>
+
+                    <div class="form">
+                        <input type="text" id="postal" name="postal" placeholder="">
+                        <label for="postal">Postal Code</label>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section class="shipping-payment">
+                <div class="shipping-method">
+                    <h2>Shipping Method</h2>
+                    <label for="shipping">Select method</label>
+                    <select class="select-design" id="shipping" name="shipping">
+                        <option value="">Standard $6.90</option>
+                        <option value="">Point relais $3.90</option>
+                        <option value="">Éco $0</option>
+                    </select>
                 </div>
 
-                <div class="form">
-                    <input type="text" id="apartment" name="apartment" placeholder="">
-                    <label for="apartment">Apartment, suite, etc.</label>
+
+
+
+
+                <div class="payment-method">
+                    <h2>Payment Method</h2>
+                    <div class=" card-type" aria-label="Payment Method: Visa, Mastercard, PayPal">
+                        <i class="fab fa-cc-visa fa-2x"></i>
+                        <i class="fab fa-cc-mastercard fa-2x"></i>
+                        <i class="fab fa-brands fa-paypal fa-2x"></i>
+                    </div>
+
+                    <div class=" form">
+
+                        <input type="text" id="card" name="card" placeholder="">
+                        <label for="card">Credit Card</label>
+                    </div>
+
+                    <div class="form">
+                        <input type="text" id="nameOnCard" name="nameOnCard" placeholder="">
+                        <label for="nameOnCard">Name on Card</label>
+                    </div>
+
+                    <div class="form">
+                        <input type="text" id="expiration" name="expiration" placeholder="">
+                        <label for="expiration">Expiration Date (MM/YY)</label>
+                    </div>
+
+                    <div class="form">
+                        <input type="text" id="cvv" name="cvv" placeholder="">
+                        <label for="cvv">Security Code</label>
+                    </div>
                 </div>
+            </section>
 
-                <div class="form">
-                    <input type="text" id="city" name="city" placeholder="">
-                    <label for="city">City</label>
-                </div>
 
-                <div class="form">
-                    <input type="text" id="country" name="country" placeholder="">
-                    <label for="country">Country</label>
-                </div>
 
-                <div class="form">
-                    <input type="text" id="postal" name="postal" placeholder="">
-                    <label for="postal">Postal Code</label>
-
-                </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the General Terms and Conditions of Sale</label>
             </div>
-        </section>
-        <section class="shipping-payment">
-            <div class="shipping-method">
-                <h2>Shipping Method</h2>
-                <label for="shipping">Select method</label>
-                <select id="shipping" name="shipping">
-                    <option value="">Standard</option>
-                    <option value="">Point relais</option>
-                    <option value="">Éco</option>
-                </select>
+            <button class="complate-purchase" aria-label="Complate Purchase">Complete Purchase</button>
             </div>
-
-            <div class="payment-method" ">
-        <h2>Payment Method</h2>
-        <div class=" card-type">
-                <img src=" https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" width="30px">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
-                    width="30px">
-            </div>
-
-            <div class=" form">
-
-                <input type="text" id="card" name="card" placeholder="">
-                <label for="card">Credit Card</label>
-            </div>
-
-            <div class="form">
-                <input type="text" id="nameOnCard" name="nameOnCard" placeholder="">
-                <label for="nameOnCard">Name on Card</label>
-            </div>
-
-            <div class="form">
-                <input type="text" id="expiration" name="expiration" placeholder="">
-                <label for="expiration">Expiration Date (MM/YY)</label>
-            </div>
-
-            <div class="form">
-                <input type="text" id="cvv" name="cvv" placeholder="">
-                <label for="cvv">Security Code</label>
-            </div>
-            </div>
-        </section>
-
+            </section>
+        </form>
         <section class="order-summery">
-            <h2>Order Summary</h2>
+            <h2 aria-label="Order Summary">Order Summary</h2>
             <div class="order-summary">
-
-
-                <div class="checkbox-container">
-                    <input type="checkbox" id="terms">
-                    <label for="terms">I agree to the General Terms and Conditions of Sale</label>
-                </div>
-                <button>Complete Purchase</button>
+                <p id="shippingMethod"></p>
             </div>
         </section>
     </main>
 
+    <footer>
+        <p>ShadowMarket All right reserved.</p>
+    </footer>
 
 </body>
-<footer>
-    <p>ShadowMarket All right reserved.</p>
-</footer>
 
 </html>
