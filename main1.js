@@ -23,7 +23,7 @@ const products = [
 
 // корзина (сохраняем в localStorage)
 // panier
-let cart1 = JSON.parse(localStorage.getItem("cart1")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 // рисуем товары
 //articles
@@ -53,7 +53,7 @@ for (let i = 0; i < products.length; i++) {
 
 // показать корзину
 function showCart() {
-  const container = document.getElementById("cart1");
+  const container = document.getElementById("cart");
   container.innerHTML = "";
 
   if (cart.length == 0) {
@@ -75,7 +75,7 @@ function showCart() {
     total = total + sousTotal;
 
     const novo = document.createElement("tr");
-    novo.innerHTML =
+    novo.innerHTML = novo.innerHTML =
       "<td><img src='" +
       item.image +
       "' width='50'></td>" +
@@ -97,7 +97,7 @@ function showCart() {
       "<td>" +
       sousTotal +
       "$</td>" +
-      "<td><button onclick='removeFromCart(" +
+      "<td><button id='supprimer' onclick='removeFromCart(" +
       j +
       ")'>Supprimer</button></td>";
     table.appendChild(novo);
@@ -114,7 +114,7 @@ function addToCart(i) {
 
   for (let k = 0; k < cart.length; k++) {
     if (cart[k].id == product.id) {
-      found = cart1[k];
+      found = cart[k];
     }
   }
 
@@ -125,7 +125,7 @@ function addToCart(i) {
       alert("Stock épuisé !");
     }
   } else {
-    cart1.push({
+    cart.push({
       id: product.id,
       name: product.name,
       price: product.price,
@@ -135,36 +135,39 @@ function addToCart(i) {
     });
   }
 
-  localStorage.setItem("cart", JSON.stringify(cart1));
+  localStorage.setItem("cart", JSON.stringify(cart));
   showCart();
 }
 
 // +
 function increaseQty(i) {
-  if (cart1[i].quantity < cart[i].stock) {
-    cart1[i].quantity = cart[i].quantity + 1;
+  if (cart[i].quantity < cart[i].stock) {
+    cart[i].quantity = cart[i].quantity + 1;
   } else {
     alert("Stock épuisé !");
   }
-  localStorage.setItem("cart", JSON.stringify(cart1));
+  localStorage.setItem("cart", JSON.stringify(cart));
   showCart();
 }
 
 // -
 function decreaseQty(i) {
-  if (cart1[i].quantity > 1) {
-    cart1[i].quantity = cart[i].quantity - 1;
+  if (cart[i].quantity > 1) {
+    cart[i].quantity = cart[i].quantity - 1;
+  } else {
+    cart.splice(i, 1);
   }
-  localStorage.setItem("cart1", JSON.stringify(cart1));
+  localStorage.setItem("cart", JSON.stringify(cart));
   showCart();
 }
 
 // supprimer
 function removeFromCart(i) {
-  cart1.splice(i, 1);
-  localStorage.setItem("cart1", JSON.stringify(cart1));
+  cart.splice(i, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
   showCart();
 }
 
 //
 showCart();
+
