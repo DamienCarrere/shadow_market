@@ -14,7 +14,6 @@ export async function loadProduct(productId) {
 
 	const main = document.querySelector("main");
 
-
 	makeNode({ type: "h1", content: jsonContent.title, parent: main });
 
 	// Note (grosse flemme de mettre plusieus étoiles avec les virgules)
@@ -138,6 +137,18 @@ export async function loadProduct(productId) {
 		className: "btn btn-cart",
 		content: "Ajouter au panier",
 		parent: actions,
+		events: {
+			click: () => {
+				const getStorage =
+					JSON.parse(localStorage.getItem("storageProducts")) || [];
+				const objStorage = { identifier: jsonContent.id, quantity: 1 };
+				getStorage.push(objStorage);
+				localStorage.setItem(
+					"storageProducts",
+					JSON.stringify(getStorage)
+				);
+			},
+		},
 	});
 	makeNode({
 		type: "button",
