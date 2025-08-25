@@ -16,67 +16,75 @@
 
 <body>
     <main>
-        <form action="">
-            <section class="contact-shipping">
+        <form id="validateForm">
+            <section class="contact-information" id="contactInformation">
 
                 <h2>Contact Information</h2>
-                <div class="contact-information">
-                    <div class="form">
-                        <input type="email" id="email" name="email" placeholder="">
-                        <label for="email">Email / mobile number</label>
-                        <div class="form">
-                            <input type="text" id="firstName" name="firstName" placeholder="">
-                            <label for="firstName">First Name</label>
+                <div class="form">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email</label>
+                    <div class="error" id="emailError"></div>
+                </div>
+                <div class="form">
+                    <input type="tel" id="tel" name="tel" placeholder=" " required>
+                    <label for="tel">Phone</label>
+                    <div class="error" id="phoneError"></div>
+                </div>
+                <div class="form">
+                    <input type="text" id="firstName" name="firstName" placeholder="" required>
+                    <label for="firstName">First Name</label>
+                    <div class="error" id="firstNameError"></div>
 
-                        </div>
-                        <div class="form">
-                            <input type="text" id="lastName" name="lastName" placeholder="">
-                            <label for="lastName">Last Name</label>
-
-                        </div>
-                    </div>
+                </div>
+                <div class="form">
+                    <input type="text" id="lastName" name="lastName" placeholder=" " required>
+                    <label for="lastName">Last Name</label>
+                    <div class="error" id="lastNameError"></div>
                 </div>
 
-                <div class="shipping-adresse">
-                    <h2>Shipping Address</h2>
+                <button type="submit" id="vCIBtn">Next</button>
+            </section>
 
-                    <div class="form">
-                        <input type="text" id="company" name="company" placeholder="">
-                        <label for="company">Company (optional)</label>
-                    </div>
+            <section class="shipping-adresse" id="shippingAdresse">
+                <h2>Shipping Address</h2>
 
-                    <div class="form">
-                        <input type="text" id="address" name="address" placeholder="">
-                        <label for="address">Address</label>
-                    </div>
+                <div class="form">
+                    <input type="text" id="company" name="company" placeholder="">
+                    <label for="company">Company (optional)</label>
+                </div>
 
-                    <div class="form">
-                        <input type="text" id="apartment" name="apartment" placeholder="">
-                        <label for="apartment">Apartment, suite, etc.</label>
-                    </div>
+                <div class="form">
+                    <input type="text" id="address" name="address" placeholder="">
+                    <label for="address">Address</label>
+                </div>
 
-                    <div class="form">
-                        <input type="text" id="city" name="city" placeholder="">
-                        <label for="city">City</label>
-                    </div>
+                <div class="form">
+                    <input type="text" id="apartment" name="apartment" placeholder="">
+                    <label for="apartment">Apartment, suite, etc.</label>
+                </div>
 
-                    <div class="form">
-                        <input type="text" id="country" name="country" placeholder="">
-                        <label for="country">Country</label>
-                    </div>
+                <div class="form">
+                    <input type="text" id="city" name="city" placeholder="">
+                    <label for="city">City</label>
+                </div>
 
-                    <div class="form">
-                        <input type="text" id="postal" name="postal" placeholder="">
-                        <label for="postal">Postal Code</label>
+                <div class="form">
+                    <input type="text" id="country" name="country" placeholder="">
+                    <label for="country">Country</label>
+                </div>
 
-                    </div>
+                <div class="form">
+                    <input type="text" id="postal" name="postal" placeholder="">
+                    <label for="postal">Postal Code</label>
+
                 </div>
             </section>
 
 
 
 
-            <section class="shipping-payment">
+
+            <section class="shipping-payment" style="display : none;">
                 <div class="shipping-method">
                     <h2>Shipping Method</h2>
                     <label for="shipping">Select method</label>
@@ -91,7 +99,7 @@
 
 
 
-                <div class="payment-method">
+                <div class="payment-method" style="display : none;">
                     <h2>Payment Method</h2>
                     <div class=" card-type" aria-label="Payment Method: Visa, Mastercard, PayPal">
                         <i class="fab fa-cc-visa fa-2x"></i>
@@ -124,18 +132,19 @@
 
 
 
-            <div class="checkbox-container">
+            <div class="checkbox-container" style="display : none;">
                 <input type="checkbox" id="terms">
                 <label for="terms">I agree to the General Terms and Conditions of Sale</label>
             </div>
-            <button class="complate-purchase" aria-label="Complate Purchase">Complete Purchase</button>
+            <button class="complate-purchase" aria-label="Complate Purchase" style="display : none;">Complete
+                Purchase</button>
             </div>
             </section>
         </form>
-        <section class="order-summery">
+        <section class="order-summery" style="display : none;">
             <h2 aria-label="Order Summary">Order Summary</h2>
             <div class="order-summary">
-                <p id="shippingMethod"></p>
+
             </div>
         </section>
     </main>
