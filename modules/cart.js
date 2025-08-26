@@ -111,6 +111,7 @@ function removeFromCart(i) {
 	cart.splice(i, 1);
 	storageDeMort();
 	showCart();
+
 }
 
 function storageDeMort() {
@@ -120,7 +121,6 @@ function storageDeMort() {
 	}));
 	localStorage.setItem("storageProducts", JSON.stringify(storageProducts));
 }
-
 showCart();
 
 console.log(cart);

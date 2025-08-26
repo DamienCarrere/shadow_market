@@ -2,6 +2,10 @@
 
 Site de e-commerce pour évaluation
 
+Patch (alpha-1.0.2) :
+
+-   Adding categories for large screen
+
 Patch (alpha-1.0.1) :
 
 -   Adding style for large screen
