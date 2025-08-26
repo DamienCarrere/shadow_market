@@ -1,11 +1,18 @@
 import { makeNode } from "../utils/makeNode.js";
 import { importData } from "../utils/importData.js";
 
+window.addEventListener("DOMContentLoaded", () => {
+	const id = new URLSearchParams(window.location.search).get("id");
+
+	if (id) {
+		loadProduct(id);
+	}
+});
+
 export async function loadProduct(productId) {
 	const jsonContent = await importData(productId);
 
 	const main = document.querySelector("main");
-	main.innerHTML = "";
 
 	makeNode({ type: "h1", content: jsonContent.title, parent: main });
 
@@ -130,6 +137,18 @@ export async function loadProduct(productId) {
 		className: "btn btn-cart",
 		content: "Ajouter au panier",
 		parent: actions,
+		events: {
+			click: () => {
+				const getStorage =
+					JSON.parse(localStorage.getItem("storageProducts")) || [];
+				const objStorage = { identifier: jsonContent.id, quantity: 1 };
+				getStorage.push(objStorage);
+				localStorage.setItem(
+					"storageProducts",
+					JSON.stringify(getStorage)
+				);
+			},
+		},
 	});
 	makeNode({
 		type: "button",
