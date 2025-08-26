@@ -1,6 +1,5 @@
 import { importData } from "../utils/importData.js";
 
-
 import { makeNode } from "../utils/makeNode.js";
 
 
@@ -112,6 +111,7 @@ function removeFromCart(i) {
 	cart.splice(i, 1);
 	storageDeMort();
 	showCart();
+
 }
 
 function storageDeMort() {
