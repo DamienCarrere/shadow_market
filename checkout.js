@@ -113,3 +113,30 @@ validateShippingAddressBtn.addEventListener("click", () => {
 });
 
 // validation - Shipping Method
+
+function validateShippingMethod() {
+    let valid = true;
+
+    const shippingMethod = document.getElementById("shipping").value.trim();
+    if (shippingMethod === "") {
+        document.getElementById("shippingError").textContent =
+            "Please select your shipping method";
+        valid = false;
+    }
+    return valid;
+}
+
+function changesthird() {
+    const c = document.getElementById("shippingMethod");
+    c.style.display = "none";
+    const d = document.getElementById("paymentMethod");
+    d.style.display = "block";
+}
+
+const validationShippingMethodBtn = document.getElementById("vSMBtn");
+
+validationShippingMethodBtn.addEventListener("click", () => {
+    if (validateShippingMethod()) {
+        changesthird();
+    }
+});

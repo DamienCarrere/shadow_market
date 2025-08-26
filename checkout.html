@@ -93,20 +93,23 @@
 
 
             <section class="shipping-method" id="shippingMethod">
-                <div class="shipping-method">
+
+
+                <label for="shipping">Select method</label>
+                <select class="select-design" id="shipping" name="shipping">
                     <h2>Shipping Method</h2>
-                    <label for="shipping">Select method</label>
-                    <select class="select-design" id="shipping" name="shipping">
-                        <option value="">Standard $6.90</option>
-                        <option value="">Point relais $3.90</option>
-                        <option value="">Éco $0</option>
-                    </select>
-                </div>
+                    <option value="">Select your shipping method</option>
+                    <option value="standard">Standard $6.90</option>
+                    <option value="point-relais">Point relais $3.90</option>
+                    <option value="éco">Éco $0</option>
+                </select>
+                <div class="error" id="shippingError"></div>
+
+                <button id="vSMBtn" type="button">Next</button>
+            </section>
 
 
-
-
-
+            <section>
                 <div class="payment-method" id="paymentMethod">
                     <h2>Payment Method</h2>
                     <div class=" card-type" aria-label="Payment Method: Visa, Mastercard, PayPal">
