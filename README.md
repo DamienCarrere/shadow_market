@@ -2,6 +2,10 @@
 
 Site de e-commerce pour évaluation
 
+Patch (beta 1.0.3):
+
+-   Minor bug fix
+
 Patch (beta 1.0.2):
 
 -   Fixing style of search bar
