@@ -2,11 +2,11 @@ import { makeNode } from "../utils/makeNode.js";
 import { importData } from "../utils/importData.js";
 
 window.addEventListener("DOMContentLoaded", () => {
-	const id = new URLSearchParams(window.location.search).get("id");
+    const id = new URLSearchParams(window.location.search).get("id");
 
-	if (id) {
-		loadProduct(id);
-	}
+    if (id) {
+        loadProduct(id);
+    }
 });
 
 export async function loadProduct(productId) {

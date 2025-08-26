@@ -1,5 +1,7 @@
 import { importData } from "../utils/importData.js";
+
 import { makeNode } from "../utils/makeNode.js";
+
 
 const getStorage = JSON.parse(localStorage.getItem("storageProducts")) || [];
 console.log(getStorage);
@@ -79,6 +81,7 @@ function showCart() {
 
 	container.appendChild(table);
 	document.getElementById("total").innerText = total.toFixed(2);
+
 }
 
 // +
