@@ -76,6 +76,28 @@
     footer {
         margin-bottom: 0 !important;
     }
+
+    #categoriesLarge {
+        display: block !important;
+        width: 100%;
+        left: 0;
+        height: 3rem;
+        background-color: #38b1e0;
+        margin-top: 0.8rem;
+        position: absolute;
+    }
+
+    #categoriesLarge ul {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #categoriesLarge a {
+        font-size: 20px;
+        color: #1f1f1f;
+    }
 }
 
 * {
