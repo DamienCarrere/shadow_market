@@ -2,8 +2,13 @@
 
 Site de e-commerce pour évaluation
 
+Patch (beta 1.0.2):
+
+-   Fixing style of search bar
+
 Patch (beta 1.0.1):
 
+-   Adding bitoniau for small screen
 -   Fixing style issues
 -   Minor bug fix
 

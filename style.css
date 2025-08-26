@@ -51,6 +51,12 @@
         font-size: 25px;
     }
 
+    #searchBar {
+        width: 80% !important;
+        height: 3rem !important;
+        margin-top: 0.5rem;
+    }
+
     nav {
         align-items: center !important;
     }
@@ -75,7 +81,7 @@
 
     #searchIcon {
         left: 80% !important;
-        top: 0;
+        top: 0.5rem !important;
     }
 
     footer {
@@ -107,6 +113,8 @@
     .cartCounter {
         height: 1.5rem !important;
         width: 1.5rem !important;
+        bottom: 1rem !important;
+        margin-left: 2rem !important;
     }
 }
 
@@ -155,8 +163,8 @@ header nav {
     font-size: 20px !important;
     display: flex;
     justify-content: center;
-    bottom: 1rem;
-    margin-left: 2rem;
+    bottom: 0.5rem;
+    margin-left: 1rem;
     border: solid black 1px;
 }
 

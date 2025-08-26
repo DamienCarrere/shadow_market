@@ -1,6 +1,7 @@
 import { makeNode } from "../utils/makeNode.js";
 import { importData } from "../utils/importData.js";
 import { bitoniauCart } from "./bitoniau.js";
+
 bitoniauCart();
 
 window.addEventListener("DOMContentLoaded", () => {
