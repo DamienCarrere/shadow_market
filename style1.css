@@ -36,4 +36,22 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
 }
+@media (min-width: 660px) {
+  .cart-item {
+    flex-direction: row;
+    align-items: center;
+  }
+  .cart-item img {
+    width: 20%;
+    margin: 0;
+  }
+  .details {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .qty-controls {
+    margin-top: 0;
+  }
+}
+
 
