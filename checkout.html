@@ -43,6 +43,7 @@
                 </div>
 
                 <button id="vCIBtn" type="button">Next</button>
+                <p class="validate-page">1/4</p>
             </section>
 
             <section class="shipping-address" id="shippingAddress">
@@ -86,6 +87,7 @@
 
                 </div>
                 <button id="vSABtn" type="button">Next</button>
+                <p class="validate-page">2/4</p>
             </section>
 
 
@@ -106,6 +108,7 @@
                 <div class="error" id="shippingError"></div>
 
                 <button id="vSMBtn" type="button">Next</button>
+                <p class="validate-page">3/4</p>
             </section>
 
 
@@ -141,30 +144,33 @@
                     <div class="form">
                         <input type="text" id="cvv" name="cvv" placeholder="">
                         <label for="cvv">Security Code/ CVV</label>
+                        <div class="error" id="cvv"></div>
                     </div>
-                    <div class="error" id="cvv"></div>
+
                     <button id="vPMBtn" type="button">Next</button>
                 </div>
 
             </section>
 
 
+            <section id="checkboxContainer">
+                <div class="checkbox-container">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">I agree to the General Terms and Conditions of Sale</label>
+                </div>
+                <button class="complate-purchase" aria-label="Complate Purchase">Complete
+                    Purchase</button>
+                </div>
 
-            <div class="checkbox-container" id="checkboxContainer">
-                <input type="checkbox" id="terms">
-                <label for="terms">I agree to the General Terms and Conditions of Sale</label>
-            </div>
-            <button class="complate-purchase" aria-label="Complate Purchase" style="display : none;">Complete
-                Purchase</button>
-            </div>
+
+                <section class="order-summery" id="orderSummery">
+                    <h2 aria-label="Order Summary">Order Summary</h2>
+                    <div class="order-summary">
+
+                    </div>
+                </section>
             </section>
         </form>
-        <section class="order-summery" id="orderSummery">
-            <h2 aria-label="Order Summary">Order Summary</h2>
-            <div class="order-summary">
-
-            </div>
-        </section>
     </main>
 
     <footer>

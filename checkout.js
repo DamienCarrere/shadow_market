@@ -5,11 +5,6 @@ const validateContactInformationBtn = document.getElementById("vCIBtn");
 function validateContactInformation() {
     let valid = true;
 
-    document.getElementById("emailError").textContent = "";
-    document.getElementById("phoneError").textContent = "";
-    document.getElementById("firstNameError").textContent = "";
-    document.getElementById("lastNameError").textContent = "";
-
     const email = document.getElementById("email").value.trim();
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (email === "" || !emailPattern.test(email)) {
