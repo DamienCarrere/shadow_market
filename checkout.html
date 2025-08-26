@@ -45,46 +45,54 @@
                 <button id="vCIBtn" type="button">Next</button>
             </section>
 
-            <section class="shipping-addresse" id="shippingAddresse">
+            <section class="shipping-address" id="shippingAddress">
                 <h2>Shipping Address</h2>
 
                 <div class="form">
                     <input type="text" id="company" name="company" placeholder="">
                     <label for="company">Company (optional)</label>
+                    <div class="error" id="companyError"></div>
                 </div>
 
                 <div class="form">
                     <input type="text" id="address" name="address" placeholder="">
                     <label for="address">Address</label>
+                    <div class="error" id="addressError"></div>
+                </div>
                 </div>
 
                 <div class="form">
                     <input type="text" id="apartment" name="apartment" placeholder="">
                     <label for="apartment">Apartment, suite, etc.</label>
+                    <div class="error" id="apartmentError"></div>
                 </div>
 
                 <div class="form">
                     <input type="text" id="city" name="city" placeholder="">
                     <label for="city">City</label>
+                    <div class="error" id="cityError"></div>
                 </div>
 
                 <div class="form">
                     <input type="text" id="country" name="country" placeholder="">
                     <label for="country">Country</label>
+                    <div class="error" id="countryError"></div>
                 </div>
 
                 <div class="form">
                     <input type="text" id="postal" name="postal" placeholder="">
                     <label for="postal">Postal Code</label>
+                    <div class="error" id="postalError"></div>
 
                 </div>
+                <button id="vSABtn" type="button">Next</button>
             </section>
 
 
 
 
 
-            <section class="shipping-payment" id="shippingPayment">
+            <section class="shipping-method" id="shippingMethod">
                 <div class="shipping-method">
                     <h2>Shipping Method</h2>
                     <label for="shipping">Select method</label>
@@ -99,7 +107,7 @@
 
 
 
-                <div class="payment-method" style="display : none;">
+                <div class="payment-method" id="paymentMethod">
                     <h2>Payment Method</h2>
                     <div class=" card-type" aria-label="Payment Method: Visa, Mastercard, PayPal">
                         <i class="fab fa-cc-visa fa-2x"></i>
@@ -132,7 +140,7 @@
 
 
 
-            <div class="checkbox-container" style="display : none;">
+            <div class="checkbox-container" id="checkboxContainer">
                 <input type="checkbox" id="terms">
                 <label for="terms">I agree to the General Terms and Conditions of Sale</label>
             </div>

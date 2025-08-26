@@ -94,15 +94,15 @@ input:focus:invalid {
     box-shadow: 0 0 5px 1px rgb(12, 172, 63);
 }
 
-#shippingAddresse {
+#shippingAddress,
+#shippingPayment,
+#shippingMethod,
+#paymentMethod,
+#checkboxContainer {
     display: none;
 }
 
 .error {
     color: red;
     font-size: 0.9em;
-}
-
-#shippingPayment {
-    display: none;
 }

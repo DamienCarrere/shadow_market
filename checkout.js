@@ -46,7 +46,7 @@ function validateContactInformation() {
 function changefirst() {
     const a = document.getElementById("contactInformation");
     a.style.display = "none";
-    const b = document.getElementById("shippingAddresse");
+    const b = document.getElementById("shippingAddress");
     b.style.display = "block";
 }
 
@@ -57,3 +57,59 @@ validateContactInformationBtn.addEventListener("click", () => {
 });
 
 // validation coordonnées - Shipping address
+
+function validateShippingAddress() {
+    let valid = true;
+
+    const address = document.getElementById("address").value.trim();
+    if (address === "") {
+        document.getElementById("addressError").textContent =
+            "Address is required";
+        valid = false;
+    }
+
+    const apartment = document.getElementById("apartment").value.trim();
+    if (apartment === "") {
+        document.getElementById("apartmentError").textContent =
+            "Apartment is required";
+        valid = false;
+    }
+
+    const city = document.getElementById("city").value.trim();
+    if (city === "") {
+        document.getElementById("cityError").textContent = "City is required";
+        valid = false;
+    }
+
+    const country = document.getElementById("country").value.trim();
+    if (country === "") {
+        document.getElementById("countryError").textContent =
+            "Country is required";
+        valid = false;
+    }
+
+    const postal = document.getElementById("postal").value.trim();
+    if (postal === "") {
+        document.getElementById("postalError").textContent =
+            "postal is required";
+        valid = false;
+    }
+    return valid;
+}
+
+function changesecond() {
+    const b = document.getElementById("shippingAddress");
+    b.style.display = "none";
+    const c = document.getElementById("shippingMethod");
+    c.style.display = "block";
+}
+
+const validateShippingAddressBtn = document.getElementById("vSABtn");
+
+validateShippingAddressBtn.addEventListener("click", () => {
+    if (validateShippingAddress()) {
+        changesecond();
+    }
+});
+
+// validation - Shipping Method
