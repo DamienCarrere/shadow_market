@@ -1,41 +1,80 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 20px;
-  background: #b5b5bd;
-}
-h1,
-h2 {
-  color: black;
+#cart {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  overflow-x: auto;
 }
 
-#cart {
-  background: #fcfcff;
-  border: 1px solid #b5b5bd;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: none;
+/* table */
+#cart table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
 }
-#cart li {
-  display: flex;
-  justify-self: unset;
-  margin-bottom: 5px;
-}
-#supprimer {
-  background: #83353e;
-  border: none;
-  padding: 3px 8px;
+
+/*  */
+#cart th {
+  background-color: #2c3e50;
   color: white;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 10px;
+  font-size: 14px;
 }
-#cart button:hover {
-  background: #3f3f3f;
+
+/*  */
+#cart td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+/* Изображения товаров */
+#cart img {
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* -----------------btn----------------- */
+#cart button {
   border: none;
-  padding: 3px 8px;
-  color: white;
-  border-radius: 5px;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 4px;
   cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  transition: background 0.2s ease;
 }
+
+.btn-qty{
+  background: #2c3e50;
+}
+.btn-remover{
+  background: #782f2f;
+}
+.btn-qty:hover{
+  background: #080809;
+}
+.btn-remover:hover{
+  background: #080809;
+}
+/* Итоговая сумма */
+#total {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+
+
 @media (min-width: 660px) {
   .cart-item {
     flex-direction: row;
@@ -53,5 +92,6 @@ h2 {
     margin-top: 0;
   }
 }
+
 
 
