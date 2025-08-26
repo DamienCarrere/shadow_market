@@ -2,6 +2,11 @@
 
 Site de e-commerce pour évaluation
 
+Patch (alpha-1.0.3) :
+
+-   Add checkout page
+
+
 Patch (alpha-1.0.2) :
 
 -   Adding categories for large screen
