@@ -1,9 +1,15 @@
 # shadow_market
 
 Site de e-commerce pour évaluation
+
+Patch (alpha-1.0.1) :
+
+-   Adding style for large screen
+-   Merge cart page to the project
+
 Patch (alpha-1.0) :
 
--   merge Carla's work and Damien's work together, for ever
+-   Merge Carla's work and Damien's work together, for ever
 
 Patch (0.2.7) :
 
