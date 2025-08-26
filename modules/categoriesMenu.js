@@ -43,7 +43,7 @@ export async function categories(importingData = importData()) {
 					products.price,
 					products.brand,
 					products.thumbnail,
-					element.id
+					products.id
 				);
 			});
 		});
