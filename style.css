@@ -18,6 +18,11 @@
         margin: 0 3%;
     }
 
+    .productsDeals {
+        grid-template-columns: repeat(4, 20%) !important;
+        margin: 0 3%;
+    }
+
     .largeView {
         display: block !important;
     }
