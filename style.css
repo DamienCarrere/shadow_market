@@ -98,6 +98,7 @@ input:focus:invalid {
 #shippingPayment,
 #shippingMethod,
 #paymentMethod,
+#orderSummery,
 #checkboxContainer {
     display: none;
 }

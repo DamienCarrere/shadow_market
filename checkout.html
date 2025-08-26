@@ -122,23 +122,30 @@
 
                         <input type="text" id="card" name="card" placeholder="">
                         <label for="card">Credit Card</label>
+                        <div class="error" id="cardError"></div>
                     </div>
 
                     <div class="form">
                         <input type="text" id="nameOnCard" name="nameOnCard" placeholder="">
                         <label for="nameOnCard">Name on Card</label>
+                        <div class="error" id="nameOnCardError"></div>
                     </div>
 
                     <div class="form">
-                        <input type="text" id="expiration" name="expiration" placeholder="">
-                        <label for="expiration">Expiration Date (MM/YY)</label>
+                        <input type="text" id="expiration" name="expiration" placeholder="" maxlength="19"> <label
+                            for="expiration">Expiration Date (MM/YY)</label>
+                        <div class="error" id="expirationError"></div>
+
                     </div>
 
                     <div class="form">
                         <input type="text" id="cvv" name="cvv" placeholder="">
-                        <label for="cvv">Security Code</label>
+                        <label for="cvv">Security Code/ CVV</label>
                     </div>
+                    <div class="error" id="cvv"></div>
+                    <button id="vPMBtn" type="button">Next</button>
                 </div>
+
             </section>
 
 
@@ -152,7 +159,7 @@
             </div>
             </section>
         </form>
-        <section class="order-summery" style="display : none;">
+        <section class="order-summery" id="orderSummery">
             <h2 aria-label="Order Summary">Order Summary</h2>
             <div class="order-summary">
 

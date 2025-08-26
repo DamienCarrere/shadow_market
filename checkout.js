@@ -140,3 +140,56 @@ validationShippingMethodBtn.addEventListener("click", () => {
         changesthird();
     }
 });
+
+// validation payment Method
+
+function validatePaymentMethod() {
+    let valid = true;
+
+    const creditCard = document.getElementById("card").value.trim();
+
+    if (creditCard === "") {
+        document.getElementById("cardError").textContent =
+            "Please enter a valid 16-digit card number";
+        valid = false;
+    }
+
+    const nameOnCard = document.getElementById("nameOnCard").value.trim();
+    if (nameOnCard === "") {
+        document.getElementById("nameOnCardError").textContent =
+            "Your name is required";
+        valid = false;
+    }
+
+    const expiration = document.getElementById("expiration").value.trim();
+
+    if (expiration === "") {
+        document.getElementById("expirationError").textContent =
+            "Expiration Date is required";
+
+        valid = false;
+    }
+
+    const cvv = document.getElementById("cvv").value.trim();
+
+    if (cvv === "") {
+        document.getElementById("cvv").textContent =
+            "Please enter a valid 3-digit CVV number";
+    }
+    return valid;
+}
+
+function changesfourth() {
+    const d = document.getElementById("paymentMethod");
+    d.style.display = "none";
+    const e = document.getElementById("checkboxContainer");
+    e.style.display = "block";
+}
+
+const validatePaymentMethodBTN = document.getElementById("vPMBtn");
+
+validatePaymentMethodBTN.addEventListener("click", () => {
+    if (validatePaymentMethod()) {
+        changesfourth();
+    }
+});
