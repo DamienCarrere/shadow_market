@@ -14,6 +14,16 @@ export async function loadProduct(productId) {
 
 	const main = document.querySelector("main");
 
+	const localStorageLoad =
+		JSON.parse(localStorage.getItem("storageProducts")) || [];
+
+	const productInStorage = localStorageLoad.find(
+		(item) => item.identifier === jsonContent.id
+	);
+	const isInPanierOrNot = productInStorage ? productInStorage.quantity : 0;
+
+	let stockActualise = jsonContent.stock - isInPanierOrNot;
+
 	makeNode({ type: "h1", content: jsonContent.title, parent: main });
 
 	// Note (grosse flemme de mettre plusieus étoiles avec les virgules)
@@ -77,7 +87,7 @@ export async function loadProduct(productId) {
 	});
 
 	// Stock
-	makeNode({
+	const resteEnStock = makeNode({
 		type: "p",
 		className: "stock",
 		content: jsonContent.stock > 0 ? "En stock" : "Rupture de stock",
@@ -132,40 +142,81 @@ export async function loadProduct(productId) {
 		className: "actions",
 		parent: main,
 	});
-	makeNode({
-		type: "button",
-		className: "btn btn-cart",
-		content: "Ajouter au panier",
-		parent: actions,
-		events: {
-			click: () => {
-				const getStorage =
-					JSON.parse(localStorage.getItem("storageProducts")) || [];
-				const isProductSavedInLocalStorage = getStorage.find(
-					(p) => p.identifier === jsonContent.id
-				);
 
-				if (isProductSavedInLocalStorage) {
-					isProductSavedInLocalStorage.quantity += 1;
-				} else {
-					getStorage.push({
-						identifier: jsonContent.id,
-						quantity: 1,
-					});
-				}
-				localStorage.setItem(
-					"storageProducts",
-					JSON.stringify(getStorage)
-				);
+	if (stockActualise > 0) {
+		const selectionQuantite = makeNode({
+			type: "select",
+			parent: actions,
+			className: "selection-quantite",
+		});
+		for (let i = 1; i <= stockActualise; i++) {
+			makeNode({
+				type: "option",
+				parent: selectionQuantite,
+				content: i,
+				attributes: { value: i },
+			});
+		}
+		const buttonAjouterPanier = makeNode({
+			type: "button",
+			className: "btn button-ajouter-panier",
+			content: "Ajouter au panier",
+			parent: actions,
+			events: {
+				click: () => {
+					const getStorage =
+						JSON.parse(localStorage.getItem("storageProducts")) ||
+						[];
+					const isProductSavedInLocalStorage = getStorage.find(
+						(p) => p.identifier === jsonContent.id
+					);
+
+					if (isProductSavedInLocalStorage) {
+						isProductSavedInLocalStorage.quantity += Number(
+							selectionQuantite.value
+						);
+					} else {
+						getStorage.push({
+							identifier: jsonContent.id,
+							quantity: Number(selectionQuantite.value),
+						});
+					}
+					localStorage.setItem(
+						"storageProducts",
+						JSON.stringify(getStorage)
+					);
+					stockActualise -= Number(selectionQuantite.value);
+					if (stockActualise > 0) {
+						resteEnStock.textContent = "En stock";
+						selectionQuantite.innerHTML = "";
+						for (let i = 1; i <= stockActualise; i++) {
+							makeNode({
+								type: "option",
+								parent: selectionQuantite,
+								content: i,
+								attributes: { value: i },
+							});
+						}
+					} else {
+						resteEnStock.textContent = "Rupture de stock";
+						resteEnStock.style.color = "red";
+						selectionQuantite.disabled = true;
+						selectionQuantite.value = 0;
+						buttonAjouterPanier.disabled = true;
+					}
+				},
 			},
-		},
-	});
-	makeNode({
-		type: "button",
-		className: "btn btn-buy",
-		content: "Acheter en 1 clic",
-		parent: actions,
-	});
+		});
+		makeNode({
+			type: "button",
+			className: "btn button-achat-click",
+			content: "Acheter en 1 clic",
+			parent: actions,
+		});
+	} else {
+		resteEnStock.textContent = "Rupture de stock";
+		resteEnStock.style.color = "red";
+	}
 
 	// Description
 	makeNode({
