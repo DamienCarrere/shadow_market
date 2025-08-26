@@ -1,5 +1,3 @@
-import { loadProduct } from "../modules/loadProduct.js";
-
 const cardsSection = document.querySelector(".cardsSection");
 
 export function createCard(title, price, brand, thumbnail, id) {
@@ -27,7 +25,7 @@ export function createCard(title, price, brand, thumbnail, id) {
 
 	productBtn.addEventListener("click", () => {
 		console.log("UwU");
-		window.location.href = `desc.html?id=${id}`;
+		window.location.href = `./pages/desc.html?id=${id}`;
 	});
 }
 
