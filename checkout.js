@@ -1,7 +1,9 @@
 // validations coordonnées
+const validateContactInformationBtn = document.getElementById("vCIBtn");
+// const form = document.getElementById("validateForm");
 
 function validateContactInformation() {
-    // let valid = true;
+    let valid = true;
 
     document.getElementById("emailError").textContent = "";
     document.getElementById("phoneError").textContent = "";
@@ -13,7 +15,7 @@ function validateContactInformation() {
     if (email === "" || !emailPattern.test(email)) {
         document.getElementById("emailError").textContent =
             "Please enter a valid email";
-        return false;
+        valid = false;
     }
 
     const tel = document.getElementById("tel").value.trim();
@@ -21,28 +23,25 @@ function validateContactInformation() {
     if (tel === "" || !phonePattern.test(tel)) {
         document.getElementById("phoneError").textContent =
             "Please enter a valid 10-digit phone number";
-        return false;
+        valid = false;
     }
 
     const firstName = document.getElementById("firstName").value.trim();
     if (firstName === "") {
         document.getElementById("firstNameError").textContent =
             "First name is required";
-        return false;
+        valid = false;
     }
 
     const lastName = document.getElementById("lastName").value.trim();
     if (lastName === "") {
         document.getElementById("lastNameError").textContent =
             "Last name is required";
-        return false;
+        valid = false;
     }
 
-    return true;
+    return valid;
 }
-
-const validateContactInformationBtn = document.getElementById("vCIBtn");
-const form = document.getElementById("validateForm");
 
 function changefirst() {
     const a = document.getElementById("contactInformation");
