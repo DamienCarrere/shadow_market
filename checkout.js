@@ -1,6 +1,6 @@
-// validations coordonnées
+// validations coordonnées - Contact Information
+
 const validateContactInformationBtn = document.getElementById("vCIBtn");
-// const form = document.getElementById("validateForm");
 
 function validateContactInformation() {
     let valid = true;
@@ -46,7 +46,7 @@ function validateContactInformation() {
 function changefirst() {
     const a = document.getElementById("contactInformation");
     a.style.display = "none";
-    const b = document.getElementById("shippingAdresse");
+    const b = document.getElementById("shippingAddresse");
     b.style.display = "block";
 }
 
@@ -55,3 +55,5 @@ validateContactInformationBtn.addEventListener("click", () => {
         changefirst();
     }
 });
+
+// validation coordonnées - Shipping address

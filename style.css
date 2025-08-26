@@ -18,7 +18,7 @@ main {
 
     gap: 10px;
 }
-.shipping-adresse {
+.shipping-addresse {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -94,11 +94,15 @@ input:focus:invalid {
     box-shadow: 0 0 5px 1px rgb(12, 172, 63);
 }
 
-#shippingAdresse {
+#shippingAddresse {
     display: none;
 }
 
 .error {
     color: red;
     font-size: 0.9em;
+}
+
+#shippingPayment {
+    display: none;
 }
