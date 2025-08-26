@@ -1,5 +1,6 @@
 import { importData } from "../utils/importData.js";
 
+
 import { makeNode } from "../utils/makeNode.js";
 
 
@@ -120,7 +121,6 @@ function storageDeMort() {
 	}));
 	localStorage.setItem("storageProducts", JSON.stringify(storageProducts));
 }
-
 showCart();
 
 console.log(cart);
