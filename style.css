@@ -436,11 +436,11 @@ h2 {
     font-weight: bold;
 }
 
-.btn-cart {
+.button-ajouter-panier {
     background: #fdd835;
 }
 
-.btn-buy {
+.button-achat-click {
     background: #ff9800;
     color: #fff;
 }
