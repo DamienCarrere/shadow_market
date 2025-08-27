@@ -1,0 +1,122 @@
+/* ----------------- Общие стили корзины ----------------- */
+#cart {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  overflow-x: auto;
+}
+
+/* Таблица */
+#cart table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Заголовки */
+#cart th {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Ячейки */
+#cart td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  font-size: 13px;
+}
+
+/* Изображения товаров */
+#cart img {
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* ----------------- Кнопки ----------------- */
+#cart button {
+  border: none;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  transition: background 0.2s ease;
+}
+
+.btn-qty {
+  background: #2c3e50;
+}
+.btn-remover {
+  background: #782f2f;
+}
+.btn-qty:hover {
+  background: #080809;
+}
+.btn-remover:hover {
+  background: #080809;
+}
+/* Итоговая сумма */
+#total {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* ----------------- Мобильная версия ----------------- */
+@media (max-width: 768px) {
+  #cart table,
+  #cart thead,
+  #cart tbody,
+  #cart th,
+  #cart td,
+  #cart tr {
+    display: block;
+    width: 100%;
+  }
+
+  #cart thead {
+    display: none; /* скрываем шапку */
+  }
+
+  #cart tr {
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+  }
+
+  #cart td {
+    text-align: left;
+    border: none;
+    padding: 4px 0;
+    font-size: 13px;
+  }
+
+  #cart td img {
+    width: 80px;
+    margin-bottom: 4px;
+  }
+
+  /* подписи для мобильной версии */
+  #cart td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2px;
+    color: #333;
+    font-size: 12px;
+  }
+}
