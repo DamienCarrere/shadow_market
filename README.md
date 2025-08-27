@@ -2,7 +2,6 @@
 
 Site de e-commerce pour évaluation
 
-
 Patch (beta 1.0.5):
 
 - Adding style description products for large screen
