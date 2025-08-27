@@ -124,5 +124,3 @@ function storageDeMort() {
     localStorage.setItem("storageProducts", JSON.stringify(storageProducts));
 }
 showCart();
-
-console.log(cart);
