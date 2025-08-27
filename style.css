@@ -117,7 +117,26 @@
         bottom: 1rem !important;
         margin-left: 2rem !important;
     }
+
+    #main-for-deschtml {
+        display: flex;
+
+    }
+
+
+    .actions {
+     display: flex;
+    flex-direction: column;
+    width: 10rem;
+    }
+
+    .product-images {
+        height: 30rem;
+        width: 30rem !important;
+    }
+
 }
+
 
 * {
     margin: 0;

@@ -1,3 +1,5 @@
+const localCheckout = JSON.parse(localStorage.getItem("saveCheckout"));
+
 // validations coordonnées - Contact Information
 
 const validateContactInformationBtn = document.getElementById("vCIBtn");
@@ -22,21 +24,25 @@ function validateContactInformation() {
     }
 
     const firstName = document.getElementById("firstName").value.trim();
+
     if (firstName === "") {
         document.getElementById("firstNameError").textContent =
             "First name is required";
         valid = false;
+    } else {
+        localStorage.setItem("saveCheckout", JSON.stringify(firstName));
+        console.log(localCheckout);
     }
-
-    const lastName = document.getElementById("lastName").value.trim();
-    if (lastName === "") {
-        document.getElementById("lastNameError").textContent =
-            "Last name is required";
-        valid = false;
-    }
-
-    return valid;
 }
+
+const lastName = document.getElementById("lastName").value.trim();
+if (lastName === "") {
+    document.getElementById("lastNameError").textContent =
+        "Last name is required";
+    valid = false;
+}
+
+return valid;
 
 function changefirst() {
     const a = document.getElementById("contactInformation");
@@ -188,3 +194,20 @@ validatePaymentMethodBTN.addEventListener("click", () => {
         changesfourth();
     }
 });
+
+// ---------------afficher la commande+ total
+
+// import { importData } from "../utils/importData.js";
+
+const complatePurchaseBtn = document.getElementById("cPBtn");
+
+complatePurchaseBtn.addEventListener("click", () => {
+    thankYou();
+});
+
+function thankYou() {
+    const local = JSON.parse(localStorage.getItem(localUser));
+    document.getElementById(
+        "thankYouMessage"
+    ).textContent = `${local}thank you for your purchase!`;
+}
