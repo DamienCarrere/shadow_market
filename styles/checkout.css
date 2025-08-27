@@ -1,9 +1,13 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-  color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 main {
@@ -76,14 +80,14 @@ footer {
 }
 
 .select-design {
-  appearance: none;
-  width: 100%;
-  padding: 12px 8px;
-  font-size: 16px;
-  border: 1px solid #000000;
-  border-radius: 6px;
-  outline: none;
-  gap: 10px;
+    width: 100%;
+    padding: 12px 8px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+
+    gap: 10px;
+    margin: 30px;
 }
 
 @media (width <= 1000px) {
@@ -123,7 +127,11 @@ input:focus:invalid {
 #vSABtn,
 #vSMBtn,
 #vPMBtn {
-  margin: 0 auto;
-  height: 30px;
-  width: 100px;
+    margin: 0 auto;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: rgb(238, 209, 209);
+    box-shadow: 0 0 5px 1px rgb(68, 71, 69);
+    font-size: 16px;
 }

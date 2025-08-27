@@ -2,8 +2,6 @@ const localCheckout = JSON.parse(localStorage.getItem("saveCheckout"));
 
 // validations coordonnées - Contact Information
 
-const validateContactInformationBtn = document.getElementById("vCIBtn");
-
 function validateContactInformation() {
     let valid = true;
 
@@ -35,6 +33,7 @@ function validateContactInformation() {
     }
 }
 
+
 const lastName = document.getElementById("lastName").value.trim();
 if (lastName === "") {
     document.getElementById("lastNameError").textContent =
@@ -50,6 +49,8 @@ function changefirst() {
     const b = document.getElementById("shippingAddress");
     b.style.display = "block";
 }
+
+const validateContactInformationBtn = document.getElementById("vCIBtn");
 
 validateContactInformationBtn.addEventListener("click", () => {
     if (validateContactInformation()) {
@@ -195,19 +196,5 @@ validatePaymentMethodBTN.addEventListener("click", () => {
     }
 });
 
-// ---------------afficher la commande+ total
 
-// import { importData } from "../utils/importData.js";
 
-const complatePurchaseBtn = document.getElementById("cPBtn");
-
-complatePurchaseBtn.addEventListener("click", () => {
-    thankYou();
-});
-
-function thankYou() {
-    const local = JSON.parse(localStorage.getItem(localUser));
-    document.getElementById(
-        "thankYouMessage"
-    ).textContent = `${local}thank you for your purchase!`;
-}
