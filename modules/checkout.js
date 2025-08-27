@@ -1,5 +1,5 @@
-const localCheckout = JSON.parse(localStorage.getItem("storageProducts"));
-const totalProduct = JSON.parse(localStorage.getItem("Total")).toFixed(2);
+const localCheckout = JSON.parse(localStorage.getItem("saveCheckout"));
+
 // validations coordonnées - Contact Information
 
 function validateContactInformation() {
@@ -31,14 +31,18 @@ function validateContactInformation() {
         localStorage.setItem("saveCheckout", JSON.stringify(firstName));
         console.log(localCheckout);
     }
+}
 
-    const lastName = document.getElementById("lastName").value.trim();
-    if (lastName === "") {
-        document.getElementById("lastNameError").textContent =
-            "Last name is required";
-        valid = false;
-    }
-    return valid
+
+const lastName = document.getElementById("lastName").value.trim();
+if (lastName === "") {
+    document.getElementById("lastNameError").textContent =
+        "Last name is required";
+    valid = false;
+}
+
+return valid;
+
 function changefirst() {
     const a = document.getElementById("contactInformation");
     a.style.display = "none";
@@ -192,29 +196,5 @@ validatePaymentMethodBTN.addEventListener("click", () => {
     }
 });
 
-// import { importData } from "../utils/importData.js";
 
-// const complatePurchaseBtn = document.getElementById("cPBtn");
 
-// ---------------afficher la commande+ total
-
-const total = JSON.parse(localStorage.getItem("saveCheckout"));
-
-function displayOrder() {
-    let totalSummary = localStorage.getItem("Total");
-    document.getElementById("Total").textContent = `${totalSummary}`;
-}
-
-const complatePurchaseBtn = document.getElementById("cPBtn");
-
-complatePurchaseBtn.addEventListener("click", () => {
-    displayOrder();
-    thankYou();
-});
-
-function thankYou() {
-    const local = JSON.parse(localStorage.getItem(localUser));
-    document.getElementById(
-        "thankYouMessage"
-    ).textContent = `${local}thank you for your purchase!`;
-}
