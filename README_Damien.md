@@ -54,6 +54,7 @@
 -----------------------------------------------------------------------------------------------
 
 # Arborescence du Projet entier:
+{
 
 │
 ├── index.html                      <!--  Page Principale  -->
@@ -81,3 +82,5 @@
 │   ├── createCards.js              <!--  Crée des cartes selon le nombre d'articles dans le JSON  -->
 │   ├── importData.js               <!--  Importe les données du fichier  -->
 │   ├── makeNode.js                 <!--  Fonction pour créer un élément dans le DOM plus facilement  -->
+
+}
