@@ -1,122 +1,213 @@
-/* ----------------- Общие стили корзины ----------------- */
-#cart {
-  margin: 20px auto;
-  padding: 15px;
-  max-width: 900px;
+/* ========== Цветовая палитра ========== */
+:root {
+  --blue: #38b1e0;
+  --dark: #1f1f1f;
+  --light: #f2f2f2;
+  --highlight: #e1b800;
+  --btn-yellow: #fdd835;
+  --btn-orange: #ff9800;
+}
+
+/* ========== Сброс стилей и базовые настройки ========== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--light);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== Заголовки ========== */
+h2,
+h3,
+h4 {
+  margin: 1rem 0;
+}
+
+/* ========== Header (шапка) ========== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(13, 13, 13, 0.734);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav input {
+  width: 100%;
+  height: 70%;
+  border-radius: 25px;
+  border: solid black 1px;
+  padding-left: 3rem;
+  font-size: 16px;
+  transition: 0.1s;
+  align-self: flex-end;
+}
+
+header nav input:focus {
+  width: 70%;
+  height: 95%;
+  border-radius: 20px;
+}
+
+header nav button {
+  background-color: transparent;
+  border: none;
+}
+
+/* ========== Основной контент ========== */
+main {
+  margin-top: 8rem;
+  min-height: 100vh;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
-  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
 }
 
-/* Таблица */
-#cart table {
+/* ========== Footer (подвал) ========== */
+footer {
+  margin-top: 10rem;
   width: 100%;
-  border-collapse: collapse;
-  text-align: center;
+  height: 8rem;
+  background-color: var(--dark);
+  display: flex;
+  align-items: start;
+  padding-top: 2rem;
+  justify-content: center;
 }
 
-/* Заголовки */
-#cart th {
-  background-color: #2c3e50;
-  color: white;
-  padding: 10px;
-  font-size: 14px;
+footer p {
+  color: var(--light);
 }
 
-/* Ячейки */
-#cart td {
-  padding: 8px;
-  border-bottom: 1px solid #ddd;
-  vertical-align: middle;
-  font-size: 13px;
+/* ========== Поиск сверху ========== */
+#topsearchBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 2rem;
 }
 
-/* Изображения товаров */
-#cart img {
-  width: 50px;
-  height: auto;
-  border-radius: 4px;
+#topsearchBar h2 {
+  color: #fff;
 }
 
-/* ----------------- Кнопки ----------------- */
-#cart button {
-  border: none;
-  padding: 4px 8px;
-  margin: 2px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: bold;
-  color: white;
-  transition: background 0.2s ease;
+#searchBarDiv {
+  width: 80%;
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
+#searchIcon {
+  position: absolute;
+  left: 0.8rem;
+  z-index: 9999999;
+  margin-top: 0.8rem;
+  transition: 0.1s;
+}
+
+#topsearchBar button {
+  margin-right: 0.8rem;
+}
+
+#topsearchBar ul {
+  list-style: none;
+}
+
+/* ========== Нижняя панель (Bottom Bar) ========== */
+#bottomBar {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--dark);
+  width: 100%;
+  height: 4rem;
+  z-index: 299792458;
+}
+
+#bottomBar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+#bottomBar li {
+  height: 100%;
+  width: 25%;
+}
+
+#bottomBar a {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bottomBar svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/* ========== Нижнее меню ========== */
+#bottomMenu {
+  position: fixed;
+  bottom: 4rem;
+  z-index: 10;
+  height: 4rem;
+  width: 100%;
+  background-color: #1b1616d8;
+  display: flex;
+  align-items: center;
+}
+
+#bottomMenu ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 0 1rem;
+}
+
+#bottomMenu li {
+  background-color: rgb(173, 159, 159);
+  border: solid black 1px;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+}
+.td-remover {
+  background: #864646;
+}
 .btn-qty {
-  background: #2c3e50;
-}
-.btn-remover {
-  background: #782f2f;
-}
-.btn-qty:hover {
-  background: #080809;
-}
-.btn-remover:hover {
-  background: #080809;
-}
-/* Итоговая сумма */
-#total {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-/* ----------------- Мобильная версия ----------------- */
-@media (max-width: 768px) {
-  #cart table,
-  #cart thead,
-  #cart tbody,
-  #cart th,
-  #cart td,
-  #cart tr {
-    display: block;
-    width: 100%;
-  }
-
-  #cart thead {
-    display: none; /* скрываем шапку */
-  }
-
-  #cart tr {
-    margin-bottom: 12px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background: #f9f9f9;
-  }
-
-  #cart td {
-    text-align: left;
-    border: none;
-    padding: 4px 0;
-    font-size: 13px;
-  }
-
-  #cart td img {
-    width: 80px;
-    margin-bottom: 4px;
-  }
-
-  /* подписи для мобильной версии */
-  #cart td:before {
-    content: attr(data-label);
-    font-weight: bold;
-    display: block;
-    margin-bottom: 2px;
-    color: #333;
-    font-size: 12px;
-  }
+  background: #a8a4a4;
 }
