@@ -7,7 +7,8 @@
     <meta name="description"
         content="Just one more step! Complete your secure and simple checkout to finalize your order. You're almost there!">
     <title>ShadowMarket/Checkout</title>
-    <link rel="stylesheet" href="../styles/checkout.css">
+    <link rel="stylesheet" href="checkout.css">
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <script src="../modules/checkout.js" type="module" defer></script>
@@ -42,7 +43,7 @@
                 </div>
 
                 <button id="vCIBtn" type="button">Next</button>
-                <p class="validate-page">1/5</p>
+                <p class="validate-page">1/4</p>
             </section>
 
             <section class="shipping-address" id="shippingAddress">
@@ -86,7 +87,7 @@
 
                 </div>
                 <button id="vSABtn" type="button">Next</button>
-                <p class="validate-page">2/5</p>
+                <p class="validate-page">2/4</p>
             </section>
 
 
@@ -95,9 +96,10 @@
 
             <section class="shipping-method" id="shippingMethod">
 
-                <h2>Shipping Method</h2>
+
                 <label for="shipping">Select method</label>
                 <select class="select-design" id="shipping" name="shipping">
+                    <h2>Shipping Method</h2>
                     <option value="">Select your shipping method</option>
                     <option value="standard">Standard $6.90</option>
                     <option value="point-relais">Point relais $3.90</option>
@@ -106,7 +108,7 @@
                 <div class="error" id="shippingError"></div>
 
                 <button id="vSMBtn" type="button">Next</button>
-                <p class="validate-page">3/5</p>
+                <p class="validate-page">3/4</p>
             </section>
 
 
@@ -119,7 +121,7 @@
                         <i class="fab fa-brands fa-paypal fa-2x"></i>
                     </div>
 
-                    <div class=" form">
+                    <div class="form">
 
                         <input type="text" id="card" name="card" placeholder="">
                         <label for="card">Credit Card</label>
@@ -133,42 +135,42 @@
                     </div>
 
                     <div class="form">
-                        <input type="text" id="expiration" name="expiration" placeholder="" maxlength="19"> <label
+                        <input type="text" id="expiration" name="expiration" placeholder=""> <label
                             for="expiration">Expiration Date (MM/YY)</label>
                         <div class="error" id="expirationError"></div>
 
                     </div>
 
                     <div class="form">
-                        <input type="text" id="cvv" name="cvv" placeholder="">
+                        <input type="text" id="cvv" name="cvv" placeholder="" maxlength="3">
                         <label for="cvv">Security Code/ CVV</label>
                         <div class="error" id="cvv"></div>
                     </div>
 
                     <button id="vPMBtn" type="button">Next</button>
-                    <p class="validate-page">4/5</p>
-                </div>  
+                </div>
+
             </section>
 
 
             <section id="checkboxContainer">
-                <h2>Complete Purchase</h2>
                 <div class="checkbox-container">
                     <input type="checkbox" id="terms">
                     <label for="terms">I agree to the General Terms and Conditions of Sale</label>
                 </div>
-                <button class="complate-purchase" aria-label="Complate Purchase">Complete
+                <button class="complate-purchase" aria-label="Complate Purchase" id="cPBtn">Complete
                     Purchase</button>
                 </div>
 
+                <div id="thankYouMessage"></div>
+                <!-- <section class="order-summery" id="orderSummery">
+                    <h2 aria-label="Order Summary" >Order Summary</h2>
+                    
 
-                <section class="order-summery" id="orderSummery">
-                    <h2 aria-label="Order Summary">Order Summary</h2>
                     <div class="order-summary">
 
                     </div>
-                </section>
-                <p class="validate-page">5/5</p>
+                </section> -->
             </section>
         </form>
     </main>
