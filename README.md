@@ -2,11 +2,31 @@
 
 Site de e-commerce pour évaluation
 
+Patch (beta 1.0.3):
+
+-   Minor bug fix
+
+Patch (beta 1.0.2):
+
+-   Fixing style of search bar
+
+Patch (beta 1.0.1):
+
+-   Adding bitoniau for small screen
+-   Fixing style issues
+-   Minor bug fix
+
+Release (beta 1.0):
+
+-   Merging all works
+-   Optimizing cart pages
+-   Major bug fixes
+-   Adding Checkout page
+-   Reorganize the folder structure
 
 Patch (alpha-1.0.3) :
 
 -   Add checkout page
-
 
 Patch (alpha-1.0.2) :
 

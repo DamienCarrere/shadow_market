@@ -2,11 +2,12 @@ import { importData } from "../utils/importData.js";
 import { createCard, clearProducts } from "../utils/createCards.js";
 
 const localHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+
 export async function search(importingData = importData()) {
-    const data = await importingData;
-    const parentSearchBar = document.querySelector("nav");
     const searchBar = document.querySelector("#searchBar");
+    const parentSearchBar = document.querySelector("nav");
     const cancelBtn = document.querySelector("#cancelBtn");
+    const data = await importingData;
     const titleSection = document.querySelector("#titleSectionCard");
     const searchIcon = document.querySelector("#searchIcon");
     const history = [];
@@ -48,8 +49,9 @@ export async function search(importingData = importData()) {
     searchBar.addEventListener("keydown", (k) => {
         if (k.key === "Enter" && searchBar.value !== "") {
             history.push(search);
+            window.location.href = "../index.html";
+            console.log("UwU");
             localStorage.setItem("searchHistory", JSON.stringify(history));
-            window.location;
         }
     });
 
