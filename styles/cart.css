@@ -1,0 +1,213 @@
+/* ========== Цветовая палитра ========== */
+:root {
+  --blue: #38b1e0;
+  --dark: #1f1f1f;
+  --light: #f2f2f2;
+  --highlight: #e1b800;
+  --btn-yellow: #fdd835;
+  --btn-orange: #ff9800;
+}
+
+/* ========== Сброс стилей и базовые настройки ========== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--light);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== Заголовки ========== */
+h2,
+h3,
+h4 {
+  margin: 1rem 0;
+}
+
+/* ========== Header (шапка) ========== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(13, 13, 13, 0.734);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav input {
+  width: 100%;
+  height: 70%;
+  border-radius: 25px;
+  border: solid black 1px;
+  padding-left: 3rem;
+  font-size: 16px;
+  transition: 0.1s;
+  align-self: flex-end;
+}
+
+header nav input:focus {
+  width: 70%;
+  height: 95%;
+  border-radius: 20px;
+}
+
+header nav button {
+  background-color: transparent;
+  border: none;
+}
+
+/* ========== Основной контент ========== */
+main {
+  margin-top: 8rem;
+  min-height: 100vh;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+/* ========== Footer (подвал) ========== */
+footer {
+  margin-top: 10rem;
+  width: 100%;
+  height: 8rem;
+  background-color: var(--dark);
+  display: flex;
+  align-items: start;
+  padding-top: 2rem;
+  justify-content: center;
+}
+
+footer p {
+  color: var(--light);
+}
+
+/* ========== Поиск сверху ========== */
+#topsearchBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 2rem;
+}
+
+#topsearchBar h2 {
+  color: #fff;
+}
+
+#searchBarDiv {
+  width: 80%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#searchIcon {
+  position: absolute;
+  left: 0.8rem;
+  z-index: 9999999;
+  margin-top: 0.8rem;
+  transition: 0.1s;
+}
+
+#topsearchBar button {
+  margin-right: 0.8rem;
+}
+
+#topsearchBar ul {
+  list-style: none;
+}
+
+/* ========== Нижняя панель (Bottom Bar) ========== */
+#bottomBar {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--dark);
+  width: 100%;
+  height: 4rem;
+  z-index: 299792458;
+}
+
+#bottomBar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+
+#bottomBar li {
+  height: 100%;
+  width: 25%;
+}
+
+#bottomBar a {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bottomBar svg {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+/* ========== Нижнее меню ========== */
+#bottomMenu {
+  position: fixed;
+  bottom: 4rem;
+  z-index: 10;
+  height: 4rem;
+  width: 100%;
+  background-color: #1b1616d8;
+  display: flex;
+  align-items: center;
+}
+
+#bottomMenu ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 0 1rem;
+}
+
+#bottomMenu li {
+  background-color: rgb(173, 159, 159);
+  border: solid black 1px;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+}
+.td-remover {
+  background: #864646;
+}
+.btn-qty {
+  background: #a8a4a4;
+}
