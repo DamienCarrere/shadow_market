@@ -117,6 +117,22 @@
         bottom: 1rem !important;
         margin-left: 2rem !important;
     }
+
+    #main-for-deschtml {
+        display: flex;
+
+    }
+
+    #section-titre-images {
+        width: 50vw;
+    }
+
+    .product-images {}
+
+    #section-prix-buttons-achat {}
+
+    #section-description {}
+
 }
 
 * {
