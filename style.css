@@ -123,33 +123,20 @@
 
     }
 
-    #section-titre-images {
-        width: 50vw;
+
+    .actions {
+     display: flex;
+    flex-direction: column;
+    width: 10rem;
     }
 
-    .product-images {}
-
-    #section-prix-buttons-achat {}
-
-    #section-description {}
-
-
-    #main-for-deschtml {
-        display: flex;
-
+    .product-images {
+        height: 30rem;
+        width: 30rem !important;
     }
-
-    #section-titre-images {
-        width: 50vw;
-    }
-
-    .product-images {}
-
-    #section-prix-buttons-achat {}
-
-    #section-description {}
 
 }
+
 
 * {
     margin: 0;
