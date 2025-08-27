@@ -3,9 +3,7 @@ import { bitoniauCart } from "./bitoniau.js";
 import { makeNode } from "../utils/makeNode.js";
 
 bitoniauCart();
-
 const getStorage = JSON.parse(localStorage.getItem("storageProducts")) || [];
-console.log(getStorage);
 
 let cart = [];
 
@@ -83,6 +81,7 @@ function showCart() {
         });
     }
 
+    localStorage.setItem("Total", total);
     container.appendChild(table);
     document.getElementById("total").innerText = total.toFixed(2);
 }

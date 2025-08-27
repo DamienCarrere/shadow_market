@@ -1,8 +1,6 @@
-const localCheckout = JSON.parse(localStorage.getItem("saveCheckout"));
-
+const localCheckout = JSON.parse(localStorage.getItem("storageProducts"));
+const totalProduct = JSON.parse(localStorage.getItem("Total")).toFixed(2);
 // validations coordonnées - Contact Information
-
-const validateContactInformationBtn = document.getElementById("vCIBtn");
 
 function validateContactInformation() {
     let valid = true;
@@ -33,23 +31,22 @@ function validateContactInformation() {
         localStorage.setItem("saveCheckout", JSON.stringify(firstName));
         console.log(localCheckout);
     }
-}
 
-const lastName = document.getElementById("lastName").value.trim();
-if (lastName === "") {
-    document.getElementById("lastNameError").textContent =
-        "Last name is required";
-    valid = false;
-}
-
-return valid;
-
+    const lastName = document.getElementById("lastName").value.trim();
+    if (lastName === "") {
+        document.getElementById("lastNameError").textContent =
+            "Last name is required";
+        valid = false;
+    }
+    return valid
 function changefirst() {
     const a = document.getElementById("contactInformation");
     a.style.display = "none";
     const b = document.getElementById("shippingAddress");
     b.style.display = "block";
 }
+
+const validateContactInformationBtn = document.getElementById("vCIBtn");
 
 validateContactInformationBtn.addEventListener("click", () => {
     if (validateContactInformation()) {
@@ -195,13 +192,23 @@ validatePaymentMethodBTN.addEventListener("click", () => {
     }
 });
 
+// import { importData } from "../utils/importData.js";
+
+// const complatePurchaseBtn = document.getElementById("cPBtn");
+
 // ---------------afficher la commande+ total
 
-// import { importData } from "../utils/importData.js";
+const total = JSON.parse(localStorage.getItem("saveCheckout"));
+
+function displayOrder() {
+    let totalSummary = localStorage.getItem("Total");
+    document.getElementById("Total").textContent = `${totalSummary}`;
+}
 
 const complatePurchaseBtn = document.getElementById("cPBtn");
 
 complatePurchaseBtn.addEventListener("click", () => {
+    displayOrder();
     thankYou();
 });
 
