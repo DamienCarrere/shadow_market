@@ -53,31 +53,33 @@
 -----------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
 
-# Arborescence du Projet entier:
+Arborescence du Projet entier: {
 
-│
-├── index.html                      <!--  Page Principale  -->
-├── home.js                         <!--  Appel des fonctions initiales  -->
-├── style.css                       <!--  Style pour la Page Principale et descProduct.js -->
-│
-├── modules/                        <!--  dossier des modules JS  -->
-│   ├── bitoniau.js                 <!--  Petite icône en dessous de l'icône panier pour afficher le nombres de produits différents pris  -->
-│   ├── cart.js                     <!--  Panier   -->
-│   ├── categoriesMenu.js           <!--  Menu pour les catégories  -->
-│   ├── checkout.js                 <!--  Page pour l'achat des produits  -->
-│   ├── descProduct.js              <!--  Page de description des produits  -->
-│   ├── homeProducts.js             <!--  JS pour la page principale  -->
-│   ├── searchbar.js                <!--  Barre de recherche  -->
-│
-├── pages/                          <!--  Pages HTML  -->
-│   ├── cart.html                   <!--  page HTML du panier  -->
-│   ├── checkout.html               <!--  page HTML du paiement  -->
-│   ├── desc.html                   <!--  page HTML de la description produit  -->
-│
-├── styles/                         <!--  dossier des styles  -->
-│   ├── checkout.css                <!--  page css pour la page de paiement  -->
-│
-├── utils/                          <!--  dossier des Utilitaires (petites fonctions pour se faciliter la vie)  -->
-│   ├── createCards.js              <!--  Crée des cartes selon le nombre d'articles dans le JSON  -->
-│   ├── importData.js               <!--  Importe les données du fichier  -->
-│   ├── makeNode.js                 <!--  Fonction pour créer un élément dans le DOM plus facilement  -->
+    │
+    ├── index.html                      <!--  Page Principale  -->
+    ├── home.js                         <!--  Appel des fonctions initiales  -->
+    ├── style.css                       <!--  Style pour la Page Principale et descProduct.js -->
+    │
+    ├── modules/                        <!--  dossier des modules JS  -->
+    │   ├── bitoniau.js                 <!--  Petite icône en dessous de l'icône panier pour afficher le nombres de produits différents pris  -->
+    │   ├── cart.js                     <!--  Panier   -->
+    │   ├── categoriesMenu.js           <!--  Menu pour les catégories  -->
+    │   ├── checkout.js                 <!--  Page pour l'achat des produits  -->
+    │   ├── descProduct.js              <!--  Page de description des produits  -->
+    │   ├── homeProducts.js             <!--  JS pour la page principale  -->
+    │   ├── searchbar.js                <!--  Barre de recherche  -->
+    │
+    ├── pages/                          <!--  Pages HTML  -->
+    │   ├── cart.html                   <!--  page HTML du panier  -->
+    │   ├── checkout.html               <!--  page HTML du paiement  -->
+    │   ├── desc.html                   <!--  page HTML de la description produit  -->
+    │
+    ├── styles/                         <!--  dossier des styles  -->
+    │   ├── checkout.css                <!--  page css pour la page de paiement  -->
+    │
+    ├── utils/                          <!--  dossier des Utilitaires (petites fonctions pour se faciliter la vie)  -->
+    │   ├── createCards.js              <!--  Crée des cartes selon le nombre d'articles dans le JSON  -->
+    │   ├── importData.js               <!--  Importe les données du fichier  -->
+    │   ├── makeNode.js                 <!--  Fonction pour créer un élément dans le DOM plus facilement  -->
+
+}
