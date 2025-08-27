@@ -121,7 +121,7 @@
                         <i class="fab fa-brands fa-paypal fa-2x"></i>
                     </div>
 
-                    <div class=" form">
+                    <div class="form">
 
                         <input type="text" id="card" name="card" placeholder="">
                         <label for="card">Credit Card</label>
@@ -135,14 +135,14 @@
                     </div>
 
                     <div class="form">
-                        <input type="text" id="expiration" name="expiration" placeholder="" maxlength="19"> <label
+                        <input type="text" id="expiration" name="expiration" placeholder=""> <label
                             for="expiration">Expiration Date (MM/YY)</label>
                         <div class="error" id="expirationError"></div>
 
                     </div>
 
                     <div class="form">
-                        <input type="text" id="cvv" name="cvv" placeholder="">
+                        <input type="text" id="cvv" name="cvv" placeholder="" maxlength="3">
                         <label for="cvv">Security Code/ CVV</label>
                         <div class="error" id="cvv"></div>
                     </div>
@@ -158,17 +158,19 @@
                     <input type="checkbox" id="terms">
                     <label for="terms">I agree to the General Terms and Conditions of Sale</label>
                 </div>
-                <button class="complate-purchase" aria-label="Complate Purchase">Complete
+                <button class="complate-purchase" aria-label="Complate Purchase" id="cPBtn">Complete
                     Purchase</button>
                 </div>
 
+                <div id="thankYouMessage"></div>
+                <!-- <section class="order-summery" id="orderSummery">
+                    <h2 aria-label="Order Summary" >Order Summary</h2>
+                    
 
-                <section class="order-summery" id="orderSummery">
-                    <h2 aria-label="Order Summary">Order Summary</h2>
                     <div class="order-summary">
 
                     </div>
-                </section>
+                </section> -->
             </section>
         </form>
     </main>
