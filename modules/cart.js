@@ -119,7 +119,7 @@ function removeFromCart(i) {
   showCart();
 }
 
-function storageDeMort() {
+function storage() {
   const storageProducts = cart.map((item) => ({
     identifier: item.id,
     quantity: item.quantity,
